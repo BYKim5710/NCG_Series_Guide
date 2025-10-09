@@ -1,66 +1,86 @@
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- 1) UA 식별 스니펫: <style> '위'에 둡니다 -->
-  <script>
-  (function () {
-    var ua = navigator.userAgent || "";
-    if (ua.indexOf("KAKAOTALK") > -1) {
-      document.documentElement.classList.add("kakao");
-      if (/Android|iPhone|iPad|iPod/i.test(ua)) {
-        document.documentElement.classList.add("kakao-mobile");
-      } else {
-        document.documentElement.classList.add("kakao-desktop");
-      }
-    }
-  })();
-  </script>
+  <title>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</title>
+  <link rel="canonical" href="https://bykim5710.github.io/NCG_Series_Guide_KR/series_guide.html" />
 
-  <!-- 2) 여기부터 스타일 시작 -->
+  <!-- OG (루트와 동일하게) -->
+  <meta property="og:url" content="https://bykim5710.github.io/NCG_Series_Guide_KR/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)" />
+  <meta property="og:description" content="BY Kim — 각 회차 PDF와 YouTube 링크 모음" />
+  <meta property="og:image" content="https://bykim5710.github.io/NCG_Series_Guide_KR/og-default-1200x630.jpg" />
+  <meta property="og:image:secure_url" content="https://bykim5710.github.io/NCG_Series_Guide_KR/og-default-1200x630.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)" />
+  <meta name="twitter:description" content="BY Kim — 각 회차 PDF와 YouTube 링크 모음" />
+  <meta name="twitter:image" content="https://bykim5710.github.io/NCG_Series_Guide_KR/og-default-1200x630.jpg" />
+
   <style>
-    /* (여기에 페이지 기존 CSS가 쭉 있고…) */
+    :root{
+      --bg:#0b0b10; --panel:#141724; --text:#eef3ff; --muted:#9aa3b2;
+      --link:#78b7ff; --border:#27305e; --accent:#1a1f34;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family:system-ui, -apple-system, Segoe UI, Roboto, Apple SD Gothic Neo, Malgun Gothic, Helvetica, Arial, sans-serif;
+      line-height:1.6;
+    }
+    .wrap{ max-width: 960px; margin: 28px auto; padding: 0 16px; }
+    header{ margin: 0 0 16px; }
+    h1{ font-size: clamp(24px, 3.2vw, 34px); margin: 0 0 8px; }
+    .lead{ color: var(--muted); margin: 0 0 18px; }
+    .back{ margin: 8px 0 18px; text-align: right; }
+    .pill{ display:inline-block; padding:8px 12px; border:1px solid var(--border); border-radius:999px; text-decoration:none; color:var(--text); }
+    .pill:hover{ background:#1b2330; }
 
-    /* ===== KakaoTalk 모바일 하드 픽스: 반드시 </style> 바로 위에 둡니다 ===== */
-    html.kakao-mobile { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+    .card{ background:var(--panel); border:1px solid #212744; border-radius:12px; padding:14px; }
+    .section-title{ font-weight:700; margin: 0 0 12px; }
 
-    html.kakao-mobile table {
-      width:100% !important;
-      table-layout:auto !important;        /* fixed → auto */
-      border-collapse:separate !important;
+    /* ===== 표 기본 ===== */
+    table{
+      width:100%;
+      border-collapse: collapse;
+      background:var(--panel);
+      border:1px solid #212744;
+      border-radius:10px;
+      overflow:hidden;
+      table-layout: auto; /* 자동 레이아웃: 내용에 맞춰 폭 계산 */
+    }
+    th, td{
+      padding:12px 10px;
+      border-bottom: 1px solid #212744;
+      vertical-align: top;
+      white-space: normal;             /* 정상 줄바꿈 */
+      word-break: keep-all;            /* 한글 단어는 가능하면 통째 유지 */
+      overflow-wrap: anywhere;         /* 필요시 단어 경계에서 줄바꿈 */
+      line-height:1.6;
+      text-align: left;
+    }
+    tr:last-child td{ border-bottom:0; }
+    a{ color:var(--link); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    /* 기존 고정폭(110px/220px) 해제 → 모바일에서 % 재배치 */
+    @media (max-width: 480px){
+      /* 열 폭 비율: 1열(세트)=20%, 2열(제목)=55%, 3열(링크)=25% */
+      th:nth-child(1), td:nth-child(1){ width:20% !important; }
+      th:nth-child(2), td:nth-child(2){ width:55% !important; } /* 제목 */
+      th:nth-child(3), td:nth-child(3){ width:25% !important; }
+
+      /* 혹시 남아있는 px 고정폭 규칙 무력화 */
+      .col-set, .col-yt { width: auto !important; }
     }
 
-    html.kakao-mobile th,
-    html.kakao-mobile td {
-      white-space:normal !important;
-      word-break:keep-all !important;
-      overflow-wrap:anywhere !important;
-      letter-spacing:normal !important;
-      -webkit-hyphens:manual !important;
-      hyphens:manual !important;
-      padding:10px 12px !important;
-      vertical-align:top !important;
-    }
-
-    html.kakao-mobile tr,
-    html.kakao-mobile th,
-    html.kakao-mobile td { display:table-cell !important; }
-
-  html.kakao-mobile * {
-  word-break: normal !important;
-  white-space: normal !important;
-  line-break: auto;
-  -webkit-line-break: auto;
-}
-
-/* ↓↓↓ 여기(주석 위)에 붙이세요 ↓↓↓ */
-html.kakao-mobile body::before{
-  content:"kakao-mobile CSS 적용됨";
-  position:fixed; left:8px; bottom:8px;
-  font-size:12px; opacity:.55; pointer-events:none;
-}
-/* ===== /KakaoTalk 모바일 하드 픽스 ===== */
-</style>
+    footer{ color:var(--muted); font-size:12px; margin:20px 8px; text-align:right; }
+  </style>
 </head>
 
 <body>
