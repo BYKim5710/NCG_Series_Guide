@@ -11,6 +11,20 @@
   <meta property="og:description" content="전체 회차(1–16) 한눈에 보기 및 YouTube 링크 모음" />
   <meta property="og:url" content="https://bykim5710.github.io/NCG_Series_Guide_KR/series_guide.html" />
 
+  <script>
+(function () {
+  var ua = navigator.userAgent || "";
+  if (ua.indexOf("KAKAOTALK") > -1) {
+    document.documentElement.classList.add("kakao");
+    if (/Android|iPhone|iPad|iPod/i.test(ua)) {
+      document.documentElement.classList.add("kakao-mobile");
+    } else {
+      document.documentElement.classList.add("kakao-desktop");
+    }
+  }
+})();
+</script>
+  
   <style>
     :root{
       --bg:#0b0b10; --panel:#141724; --text:#eef3ff; --muted:#9aa3b2;
