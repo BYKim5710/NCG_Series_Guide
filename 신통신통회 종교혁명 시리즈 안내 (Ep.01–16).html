@@ -1,62 +1,68 @@
-<!doctype html>
-<html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Open Graph (공유 미리보기) -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)" />
-  <meta property="og:description" content="전체 회차(1–16) 한눈에 보기 및 YouTube 링크 모음" />
-  <meta property="og:url" content="https://bykim5710.github.io/NCG_Series_Guide_KR/series_guide.html" />
-
+  <!-- 1) UA 식별 스니펫: <style> '위'에 둡니다 -->
   <script>
-(function () {
-  var ua = navigator.userAgent || "";
-  if (ua.indexOf("KAKAOTALK") > -1) {
-    document.documentElement.classList.add("kakao");
-    if (/Android|iPhone|iPad|iPod/i.test(ua)) {
-      document.documentElement.classList.add("kakao-mobile");
-    } else {
-      document.documentElement.classList.add("kakao-desktop");
+  (function () {
+    var ua = navigator.userAgent || "";
+    if (ua.indexOf("KAKAOTALK") > -1) {
+      document.documentElement.classList.add("kakao");
+      if (/Android|iPhone|iPad|iPod/i.test(ua)) {
+        document.documentElement.classList.add("kakao-mobile");
+      } else {
+        document.documentElement.classList.add("kakao-desktop");
+      }
     }
-  }
-})();
-</script>
-  
+  })();
+  </script>
+
+  <!-- 2) 여기부터 스타일 시작 -->
   <style>
-    :root{
-      --bg:#0b0b10; --panel:#141724; --text:#eef3ff; --muted:#9aa3b2;
-      --link:#78b7ff; --border:#27305e; --accent:#1a1f34;
+    /* (여기에 페이지 기존 CSS가 쭉 있고…) */
+
+    /* ===== KakaoTalk 모바일 하드 픽스: 반드시 </style> 바로 위에 둡니다 ===== */
+    html.kakao-mobile { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+
+    html.kakao-mobile table {
+      width:100% !important;
+      table-layout:auto !important;        /* fixed → auto */
+      border-collapse:separate !important;
     }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);
-         font-family:system-ui, -apple-system, Segoe UI, Roboto, Apple SD Gothic Neo,
-                      Malgun Gothic, Helvetica, Arial, sans-serif; line-height:1.6}
-    .wrap{max-width:960px;margin:28px auto;padding:0 16px}
-    header{margin:0 0 16px}
-    h1{font-size:clamp(24px,3.2vw,34px);margin:0 0 6px}
-    .lead{color:var(--muted);margin:0 0 18px}
-    .back{margin:8px 0 18px;text-align:right}
-    .pill{display:inline-block;padding:8px 12px;border:1px solid var(--border);
-          border-radius:999px;text-decoration:none;color:var(--text)}
-    .pill:hover{background:#1b2330}
 
-    .card{background:var(--panel);border:1px solid #212744;border-radius:12px;padding:14px}
-    .section-title{font-weight:700;margin:0 0 12px}
+    html.kakao-mobile th,
+    html.kakao-mobile td {
+      white-space:normal !important;
+      word-break:keep-all !important;
+      overflow-wrap:anywhere !important;
+      letter-spacing:normal !important;
+      -webkit-hyphens:manual !important;
+      hyphens:manual !important;
+      padding:10px 12px !important;
+      vertical-align:top !important;
+    }
 
-    table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid #212744;border-radius:10px;overflow:hidden}
-    th,td{padding:12px 10px;border-bottom:1px solid #212744;vertical-align:top}
-    th{background:#121627;text-align:left}
-    tr:last-child td{border-bottom:0}
-    a{color:var(--link);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .col-set{width:110px}
-    .col-yt{width:220px}
-    footer{color:var(--muted);font-size:12px;margin:20px 0 8px;text-align:right}
-  </style>
+    html.kakao-mobile tr,
+    html.kakao-mobile th,
+    html.kakao-mobile td { display:table-cell !important; }
+
+  html.kakao-mobile * {
+  word-break: normal !important;
+  white-space: normal !important;
+  line-break: auto;
+  -webkit-line-break: auto;
+}
+
+/* ↓↓↓ 여기(주석 위)에 붙이세요 ↓↓↓ */
+html.kakao-mobile body::before{
+  content:"kakao-mobile CSS 적용됨";
+  position:fixed; left:8px; bottom:8px;
+  font-size:12px; opacity:.55; pointer-events:none;
+}
+/* ===== /KakaoTalk 모바일 하드 픽스 ===== */
+</style>
 </head>
+
 <body>
   <div class="wrap">
     <header>
