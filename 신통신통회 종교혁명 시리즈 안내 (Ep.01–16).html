@@ -58,7 +58,17 @@
 
   /* 푸터 */
   footer{color:var(--muted); font-size:12px; margin:22px 6px 8px; text-align:right}
-  /* 인앱 브라우저 호환: hidden 강제 */
+  /* JS 없는 해시 전환 */
+  #guide{ display:none !important; }
+  #main { display:block !important; }
+  #guide:target{ display:block !important; }
+  #guide:target ~ #main{ display:none !important; }   /* ← 이 줄이 반드시 활성화 */
+
+ /* 메인이 타깃일 때 보강(옵션) */
+  #main:target{ display:block !important; }
+  #guide:target ~ #main:target{ display:block !important; }
+    
+    /* 인앱 브라우저 호환: hidden 강제 */
  [hidden]{ display:none !important; }
 
   /* 모바일(카카오 인앱 포함) 세로 깨짐 방지 */
@@ -80,6 +90,19 @@
 <body>
 <div class="wrap">
 
+<!-- 안내(Guide) 섹션 -->D
+  <section id="guide">
+    <header>
+      <h2>구성</h2>
+      <ul style="list-style:disc; padding-left:18px; margin:0 0 10px">
+        <li>시리즈 안내 웹페이지 (현재 페이지)</li>
+        <li><a href="https://bykim5710.github.io/series.kr/NCG_Series_Guide_KR/NCG_Series_Guide_KR.docx"
+               target="_blank" rel="noopener">Word 매뉴얼 다운로드 (KR, DOCX)</a></li>
+      </ul>
+      <p><a id="btnBack" class="pill" href="#main">메인 시리즈 페이지로 돌아가기</a></p>
+    </header>
+  </section>
+  
   <!-- 메인(표) 섹션 -->
   <section id="main">
     <header>
@@ -132,73 +155,12 @@
     </section>
   </section>
 
-  <!-- 안내(Guide) 섹션 -->D
-  <section id="guide" hidden>
-    <header>
-      <h2>구성</h2>
-      <ul style="list-style:disc; padding-left:18px; margin:0 0 10px">
-        <li>시리즈 안내 웹페이지 (현재 페이지)</li>
-        <li><a href="https://bykim5710.github.io/series.kr/NCG_Series_Guide_KR/NCG_Series_Guide_KR.docx"
-               target="_blank" rel="noopener">Word 매뉴얼 다운로드 (KR, DOCX)</a></li>
-      </ul>
-      <p><a id="btnBack" class="pill" href="#main">메인 시리즈 페이지로 돌아가기</a></p>
-    </header>
-  </section>
-
   <footer>
     © BY Kim · New Consilience Group (NCG)
   </footer>
 </div>
 
 <!-- 같은 페이지 내 전환(메인 ↔ 안내) 스크립트 -->
-<script>
-(function(){
-  const $main  = document.getElementById('main');
-  const $guide = document.getElementById('guide');
-  const $btnG  = document.getElementById('btnGuide');
-  const $btnB  = document.getElementById('btnBack');
-
-  // 안전장치: 요소가 없으면 조용히 종료
-  if (!$main || !$guide) return;
-
-  // 인앱 웹뷰 호환: hidden + aria-hidden + display 동시 제어
-  function showSection(target){
-    const showGuide = (target === 'guide');
-
-    $guide.hidden = !showGuide;
-    $guide.setAttribute('aria-hidden', String(!showGuide));
-    $guide.style.display = showGuide ? 'block' : 'none';
-
-    $main.hidden  = showGuide;
-    $main.setAttribute('aria-hidden', String(showGuide));
-    $main.style.display = showGuide ? 'none' : 'block';
-
-    // 해시 갱신: 일부 환경은 pushState를 무시하므로 hash로 강제
-    const want = showGuide ? '#guide' : '#main';
-    if (location.hash !== want) {
-      location.hash = want;
-    } else {
-      // 같은 해시 재클릭 시 강제 리플로우
-      setTimeout(()=>{},0);
-    }
-  }
-
-  // 버튼 핸들러 (기본 이동 막고 JS 전환)
-  if ($btnG) $btnG.addEventListener('click', function(e){ e.preventDefault(); showSection('guide'); });
-  if ($btnB) $btnB.addEventListener('click', function(e){ e.preventDefault(); showSection('main');  });
-
-  // 뒤로/앞으로 가기 대응
-  window.addEventListener('hashchange', function(){
-    showSection(location.hash === '#guide' ? 'guide' : 'main');
-  }, false);
-
-  // 초기 상태 적용
-  showSection(location.hash === '#guide' ? 'guide' : 'main');
-
-  // 극악 인앱 대비: 초기 1회 더 강제 적용(렌더 지연 보정)
-  setTimeout(()=>showSection(location.hash === '#guide' ? 'guide' : 'main'), 0);
-})();
-</script>
 
 </body>
 </html>
