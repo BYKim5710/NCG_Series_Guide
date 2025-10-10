@@ -3,81 +3,122 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</title>
 
-  <!-- Open Graph (공유 미리보기) -->
+  <title>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</title>
+  <meta name="description" content="BY Kim — 각 회차 PDF와 YouTube 링크 모음" />
+
+  <!-- Canonical / 기본 URL -->
+  <link rel="canonical" href="https://bykim5710.github.io/series.kr/" />
+
+  <!-- Open Graph -->
+  <meta property="og:url" content="https://bykim5710.github.io/series.kr/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)" />
-  <meta property="og:description" content="전체 회차(1–16) 한눈에 보기 및 YouTube 링크 모음" />
-  <meta property="og:url" content="https://bykim5710.github.io/NCG_Series_Guide_KR/series_guide.html" />
+  <meta property="og:description" content="BY Kim — 각 회차 PDF와 YouTube 링크 모음" />
+  <meta property="og:image" content="og-default-1200x630.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)" />
+  <meta name="twitter:description" content="BY Kim — 각 회차 PDF와 YouTube 링크 모음" />
+  <meta name="twitter:image" content="og-default-1200x630.jpg" />
+
+  <!-- ===== 디자인 & 모바일(카카오 인앱 포함) 레이아웃 고정 CSS ===== -->
   <style>
-    :root{
-      --bg:#0b0b10; --panel:#141724; --text:#eef3ff; --muted:#9aa3b2;
-      --link:#78b7ff; --border:#27305e; --accent:#1a1f34;
+  :root{
+    --bg:#0b0b10; --panel:#141724; --text:#eef3ff; --muted:#9aa3b2;
+    --link:#78b7ff; --border:#27305e; --accent:#1a1f34;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--bg);color:var(--text);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Malgun Gothic,Helvetica,Arial,sans-serif;
+    line-height:1.6
+  }
+  .wrap{max-width:960px;margin:28px auto;padding:0 16px}
+  header{margin:0 0 16px}
+  h1{font-size:clamp(24px,3vw,34px);margin:0 0 8px}
+  .lead{color:var(--muted);margin:0 0 18px}
+  .back{margin:8px 0 18px;text-align:right}
+  .pill{
+    display:inline-block;padding:8px 12px;border:1px solid var(--border);
+    border-radius:999px;text-decoration:none;color:var(--text)
+  }
+  .pill:hover{background:#1b2330}
+  .card{background:var(--panel);border:1px solid #212744;border-radius:12px;padding:14px}
+  .section-title{font-weight:700;margin:0 0 12px}
+
+  table{
+    width:100%;border-collapse:collapse;background:var(--panel);
+    border:1px solid #212744;border-radius:10px;overflow:hidden
+  }
+  th,td{padding:12px 10px;border-bottom:1px solid #212744;vertical-align:top}
+  th{background:#121627;text-align:left}
+  tr:last-child td{border-bottom:0}
+
+  a{color:var(--link);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .col-set{width:110px}
+  .col-yt{width:220px}
+
+  footer{color:var(--muted);font-size:12px;margin:20px 0 8px;text-align:right}
+
+  /* ===== 강제 모바일 레이아웃(카카오 인앱 대응) : table/col 고정폭 완전 해제 ===== */
+  @media (max-width:768px){
+    table{table-layout:auto !important;width:100% !important}
+    col, col[width], col[style*="width"]{width:auto !important}
+    th,td{
+      white-space:normal !important;word-break:keep-all !important;overflow-wrap:anywhere !important;
+      vertical-align:top !important;line-height:1.6 !important;text-align:left !important
     }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);
-         font-family:system-ui, -apple-system, Segoe UI, Roboto, Apple SD Gothic Neo,
-                      Malgun Gothic, Helvetica, Arial, sans-serif; line-height:1.6}
-    .wrap{max-width:960px;margin:28px auto;padding:0 16px}
-    header{margin:0 0 16px}
-    h1{font-size:clamp(24px,3.2vw,34px);margin:0 0 6px}
-    .lead{color:var(--muted);margin:0 0 18px}
-    .back{margin:8px 0 18px;text-align:right}
-    .pill{display:inline-block;padding:8px 12px;border:1px solid var(--border);
-          border-radius:999px;text-decoration:none;color:var(--text)}
-    .pill:hover{background:#1b2330}
+    .col-set,.col-yt,[class*="col-"]{width:auto !important}
 
-    .card{background:var(--panel);border:1px solid #212744;border-radius:12px;padding:14px}
-    .section-title{font-weight:700;margin:0 0 12px}
-
-    table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid #212744;border-radius:10px;overflow:hidden}
-    th,td{padding:12px 10px;border-bottom:1px solid #212744;vertical-align:top}
-    th{background:#121627;text-align:left}
-    tr:last-child td{border-bottom:0}
-    a{color:var(--link);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .col-set{width:110px}
-    .col-yt{width:220px}
-    footer{color:var(--muted);font-size:12px;margin:20px 0 8px;text-align:right}
+    /* 가독 좋은 3열 비율 가이드(필요 시) */
+    table colgroup col:nth-child(1){width:25% !important} /* 세트 */
+    table colgroup col:nth-child(2){width:55% !important} /* 제목 */
+    table colgroup col:nth-child(3){width:20% !important} /* 링크 */
+  }
   </style>
 </head>
+
 <body>
   <div class="wrap">
+
     <header>
       <h1>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</h1>
-      <p class="lead">BY Kim — New Consilience Group (NCG)</p>
+      <p class="lead">BY Kim · New Consilience Group (NCG)</p>
       <p class="back">
-        🔙 <a class="pill" href="https://bykim5710.github.io/series.kr/" target="_blank" rel="noopener">메인 시리즈 페이지로 돌아가기</a>
+        <a class="pill" href="index.html">메인 시리즈 페이지로 돌아가기</a>
       </p>
     </header>
 
-    <!-- 구성 -->
     <section class="card" style="margin-bottom:16px">
-      <h3 class="section-title">구성</h3>
-      <ul style="margin:0;padding-left:18px">
+      <h2 class="section-title">구성</h2>
+      <ul style="margin:0 0 6px 18px">
         <li>시리즈 안내 웹페이지(현재 페이지)</li>
-        <li>
-          <a href="https://bykim5710.github.io/NCG_Series_Guide_KR/NCG_Series_Guide_KR.docx" target="_blank" rel="noopener">
-            Word 매뉴얼 다운로드 (NCG_Series_Guide_KR.docx)
-          </a>
-        </li>
+        <li><a href="NCG_Series_Guide_KR.docx">Word 매뉴얼 다운로드 (NCG_Series_Guide_KR.docx)</a></li>
       </ul>
     </section>
 
-    <!-- 표: 주요 세트 구성 -->
     <section class="card">
-      <h3 class="section-title">주요 세트 구성</h3>
-      <table>
+      <h2 class="section-title">주요 세트 구성</h2>
+
+      <table aria-label="세트 목록">
+        <colgroup>
+          <col class="col-set" /><col /><col class="col-yt" />
+        </colgroup>
         <thead>
           <tr>
-            <th class="col-set">세트</th>
-            <th>제목</th>
-            <th class="col-yt">YouTube 링크</th>
+            <th scope="col">세트</th>
+            <th scope="col">제목</th>
+            <th scope="col">YouTube 링크</th>
           </tr>
         </thead>
         <tbody>
+          
           <tr>
             <td>제1–2회</td>
             <td>종교혁명의 의미와 기독교 민주주의</td>
