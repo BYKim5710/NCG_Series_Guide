@@ -2,47 +2,66 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
+  <title>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- 기본 SEO -->
-  <title>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</title>
-  <link rel="canonical" href="https://bykim5710.github.io/NCG_Series_Guide_KR/" />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://bykim5710.github.io/series.kr/">
 
-  <!-- Open Graph / Kakao / Facebook -->
-  <meta property="og:url" content="https://bykim5710.github.io/NCG_Series_Guide_KR/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)" />
-  <meta property="og:description" content="BY Kim — 각 회차 PDF와 YouTube 링크 모음" />
+  <!-- Open Graph -->
+  <meta property="og:url"         content="https://bykim5710.github.io/series.kr/">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)">
+  <meta property="og:description" content="BY Kim — 각 회차 PDF와 YouTube 링크 모음">
+  <meta property="og:image"       content="https://bykim5710.github.io/series.kr/og-default.jpg">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name"    content="series.kr">
 
-  <!-- 가로형 카드(1.91:1) 강제: 1200x630 -->
-  <meta property="og:image" content="https://bykim5710.github.io/NCG_Series_Guide_KR/og-default-1200x630.jpg" />
-  <meta property="og:image:secure_url" content="https://bykim5710.github.io/NCG_Series_Guide_KR/og-default-1200x630.jpg" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)">
+  <meta name="twitter:description" content="BY Kim — 각 회차 PDF와 YouTube 링크 모음">
+  <meta name="twitter:image"       content="https://bykim5710.github.io/series.kr/og-default.jpg">
 
-  <!-- Twitter 카드(참고: X) -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)" />
-  <meta name="twitter:description" content="BY Kim — 각 회차 PDF와 YouTube 링크 모음" />
-  <meta name="twitter:image" content="https://bykim5710.github.io/NCG_Series_Guide_KR/og-default-1200x630.jpg" />
-
+  <!-- 기본 폰트 & 대비 좋은 다크 배경(가독성 위해) -->
   <style>
-    /* 페이지 깜빡임 줄이기 (스크립트 이동 전 짧은 안내) */
-    body { margin:0; font:14px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Malgun Gothic, Arial, sans-serif; background:#0b0b10; color:#eef3ff; }
-    .wrap { max-width: 960px; margin: 24px auto; padding: 16px; }
-    a { color:#78b7ff; text-decoration: underline; }
+    body{
+      margin:0;
+      font:14px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Malgun Gothic, Helvetica, Arial, sans-serif;
+      background:#0b0b10; color:#eef3ff;
+    }
+    .wrap{max-width:960px;margin:28px auto;padding:16px}
+    a{color:#78b7ff;text-decoration:underline}
+    .hint{opacity:.7}
+    /* 카카오/모바일 미리보기용 강제 고정 폭 해제 */
+    @media (max-width: 768px){
+      table{table-layout:auto !important; width:100% !important}
+      col, colgroup, col[style*="width"]{width:auto !important}
+      th, td{
+        white-space:normal !important;
+        word-break:keep-all !important;
+        overflow-wrap:anywhere !important;
+        vertical-align:top !important;
+        line-height:1.6 !important;
+        text-align:left !important;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <noscript>
-      자바스크립트가 꺼져 있어 자동 이동이 되지 않습니다.<br/>
-      <a href="series_guide.html">여기를 클릭하여 시리즈 안내 페이지로 이동하세요.</a>
+      자바스크립트가 꺼져 있어 자동 이동이 되지 않습니다.<br>
+      <a href="series_guide.html">여기를 클릭</a>하여 시리즈 안내 페이지로 이동하세요.
     </noscript>
+    <p class="hint">안내: 이 페이지는 공유 미리보기(OG/트위터 카드)만 담당하고, 화면은 자동으로 안내 페이지로 이동합니다.</p>
   </div>
 
-  <!-- 사람에게는 안내 페이지로, 스크래퍼는 위 OG만 읽음 -->
-  <script>location.href = "series_guide.html";</script>
+  <!-- 실제 화면은 안내 페이지로 즉시 이동 -->
+  <script>
+    // 캐시 강제 무력화를 원하면 아래에 ?v=숫자 를 추가하세요 (예: 'series_guide.html?v=5')
+    location.replace('series_guide.html');
+  </script>
 </body>
 </html>
