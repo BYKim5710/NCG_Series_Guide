@@ -1,46 +1,113 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph (공유 썸네일) -->
+  <meta property="og:url"         content="https://bykim5710.github.io/series.kr/NCG_Series_Guide_KR/" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)" />
+  <meta property="og:description" content="BY Kim — 각 회차 PDF와 YouTube 링크 모음" />
+  <meta property="og:image"       content="https://bykim5710.github.io/series.kr/og-default.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- 디자인 & 레이아웃 -->
   <style>
-    body { background-color:#0d1117; color:#e6edf3; font-family:Segoe UI, sans-serif; margin:0; padding:0; }
-    a { color:#58a6ff; text-decoration:none; }
-    .btn { background-color:#2b6cb0; color:white; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:bold; }
-    .card { background-color:#161b22; border-radius:12px; padding:16px; margin:16px; }
-    h1,h2 { color:white; }
-    table { width:100%; border-collapse:collapse; margin-top:12px; }
-    th,td { padding:8px 10px; border-bottom:1px solid #30363d; }
-    th { text-align:left; color:#9ecbff; }
-    tr:hover { background-color:#21262d; }
-    .pill { display:inline-block; padding:8px 16px; background-color:#238636; color:white; border-radius:50px; font-weight:bold; }
-    p.lead { color:#c9d1d9; font-size:15px; margin-top:4px; }
+  :root{
+    --bg:#0b0b10; --panel:#141724; --text:#eef3ff; --muted:#9aa3b2;
+    --link:#78b7ff; --border:#27305e; --line:#212744;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font:15px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Malgun Gothic,Helvetica,Arial,sans-serif;
+  }
+  .wrap{max-width:960px; margin:28px auto; padding:0 16px}
+  a{color:var(--link); text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{margin:0 0 18px}
+  h1{margin:0 0 10px; font-size:clamp(22px,3.6vw,32px)}
+  .lead{color:var(--muted); margin:0 0 12px}
+  .pill{
+    display:inline-block; padding:8px 14px; border:1px solid var(--border);
+    border-radius:999px; background:var(--panel); color:var(--text)
+  }
+  .pill:hover{background:#1b2333}
+
+  .card{
+    background:var(--panel); border:1px solid var(--line);
+    border-radius:12px; padding:16px; margin:16px 0
+  }
+  .section-title{margin:0 0 12px; font-weight:700}
+
+  /* 표 */
+  table{
+    width:100%; border-collapse:collapse; background:var(--panel);
+    border:1px solid var(--line); border-radius:10px; overflow:hidden;
+    table-layout:auto;
+  }
+  th,td{
+    padding:12px 10px; border-bottom:1px solid var(--line); vertical-align:top;
+    white-space:normal; word-break:keep-all; overflow-wrap:anywhere; text-align:left; line-height:1.6
+  }
+  thead th{color:#b7bfd1}
+  tr:last-child td{border-bottom:0}
+
+  /* 푸터 */
+  footer{color:var(--muted); font-size:12px; margin:22px 6px 8px; text-align:right}
+  /* JS 없는 해시 전환 */
+  #guide{ display:none !important; }
+  #main { display:block !important; }
+  #guide:target{ display:block !important; }
+  #guide:target ~ #main{ display:none !important; }   /* ← 이 줄이 반드시 활성화 */
+
+ /* 메인이 타깃일 때 보강(옵션) */
+  #main:target{ display:block !important; }
+  #guide:target ~ #main:target{ display:block !important; }
+    
+    /* 인앱 브라우저 호환: hidden 강제 */
+ [hidden]{ display:none !important; }
+
+  /* 모바일(카카오 인앱 포함) 세로 깨짐 방지 */
+  @media (max-width: 768px){
+    table{table-layout:auto !important; width:100% !important}
+    col, col[width], col[style*="width"]{width:auto !important}
+    th,td{
+      white-space:normal !important; word-break:keep-all !important; overflow-wrap:anywhere !important;
+      vertical-align:top !important; line-height:1.6 !important; text-align:left !important
+    }
+    .col-set,.col-yt,[class*="col-"]{width:auto !important}
+    th:nth-child(1),td:nth-child(1){width:25% !important} /* 회차 */
+    th:nth-child(2),td:nth-child(2){width:55% !important} /* 제목 */
+    th:nth-child(3),td:nth-child(3){width:20% !important} /* 링크 */
+  }
   </style>
 </head>
 
 <body>
-  <!-- 안내 섹션 -->
+<div class="wrap">
+
+<!-- 안내(Guide) 섹션 -->D
   <section id="guide">
     <header>
       <h2>구성</h2>
-      <ul style="list-style:disc; padding-left:18px;">
+      <ul style="list-style:disc; padding-left:18px; margin:0 0 10px">
         <li>시리즈 안내 웹페이지 (현재 페이지)</li>
-        <li>
-          <a href="https://bykim5710.github.io/series.kr/NCG_Series_Guide_KR/NCG_Series_Guide_KR.docx" target="_blank" rel="noopener">
-            Word 매뉴얼 다운로드 (KR, DOCX)
-          </a>
-        </li>
+        <li><a href="https://bykim5710.github.io/series.kr/NCG_Series_Guide_KR/NCG_Series_Guide_KR.docx"
+               target="_blank" rel="noopener">Word 매뉴얼 다운로드 (KR, DOCX)</a></li>
       </ul>
       <p><a id="btnBack" class="pill" href="#main">메인 시리즈 페이지로 돌아가기</a></p>
     </header>
   </section>
-
+  
   <!-- 메인(표) 섹션 -->
   <section id="main">
     <header>
       <h1>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</h1>
-      <p class="lead">BY Kim · New Consilience Group (NCG)</p>
+      <p class="lead">BY Kim — New Consilience Group (NCG)</p>
       <p><a id="btnGuide" class="pill" href="#guide">시리즈 안내 보기</a></p>
     </header>
 
@@ -52,26 +119,48 @@
         </thead>
         <tbody>
           <tr><td>Ep.01</td><td>김병윤 책과 신통신통회 소개</td>
-            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
-          <tr><td>Ep.02</td><td>종교혁명의 의미와 기독교 민주주의</td>
-            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
-          <tr><td>Ep.03</td><td>종교개혁을 넘어 기본으로 돌아가자</td>
-            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
-          <tr><td>Ep.04</td><td>반박문과 종교혁명선언서</td>
-            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
-          <tr><td>Ep.07–08</td><td>무유와 퀘크 – 공무영(空無靈)</td>
-            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
-          <tr><td>Ep.09–10</td><td>사후세계의 진실과 하나님</td>
-            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
-          <tr><td>Ep.11–12</td><td>로마 교황청에 대한 반박문 – 여호와 대 신성</td>
-            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
-          <tr><td>Ep.13–14</td><td>십일조와 사후세계 – 이승의 천국 구현</td>
-            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
-          <tr><td>Ep.15–16</td><td>모세의 출애굽과 다윗·솔로몬 제국의 허상</td>
-            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
+              <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener" aria-label="Ep.01 YouTube">▶ YouTube</a></td></tr>
+          <tr><td>Ep.02</td><td>왜 종교혁명인가 – 기독교민주주의</td>
+              <td><a href="https://youtu.be/uSlXqWci9sg" target="_blank" rel="noopener" aria-label="Ep.02 YouTube">▶ YouTube</a></td></tr>
+          <tr><td>Ep.03</td><td>왜 종교혁명인가 – 종교개혁의 미완성</td>
+              <td><a href="https://youtu.be/5nO0v8XIb9g" target="_blank" rel="noopener" aria-label="Ep.03 YouTube">▶ YouTube</a></td></tr>
+          <tr><td>Ep.04</td><td>왜 종교혁명인가 – 기본으로 돌아가자</td>
+              <td><a href="https://youtu.be/tzP5tBnsb1w" target="_blank" rel="noopener" aria-label="Ep.04 YouTube">▶ YouTube</a></td></tr>
+          <tr><td>Ep.05</td><td>기독교계에 보낸 편지</td>
+              <td><a href="https://youtu.be/pfLMK1D8P_E" target="_blank" rel="noopener" aria-label="Ep.05 YouTube">▶ YouTube</a></td></tr>
+          <tr><td>Ep.06</td><td>종교혁명선언서</td>
+              <td><a href="https://youtu.be/QCAsHEt5x_E" target="_blank" rel="noopener" aria-label="Ep.06 YouTube">▶ YouTube</a></td></tr>
+          <tr><td>Ep.07</td><td>무유와 전이</td>
+              <td><a href="https://youtu.be/x9OrCqvKH28" target="_blank" rel="noopener" aria-label="Ep.07 YouTube">▶ YouTube</a></td></tr>
+          <tr><td>Ep.08</td><td>공무영-무유와 쿼크</td>
+              <td><a href="https://youtu.be/k4T70gcQLNs" target="_blank" rel="noopener" aria-label="Ep.08 YouTube">▶ YouTube</a></td></tr>
+          <tr><td>Ep.09</td><td>사후세계 대. 전이계</td>
+              <td><a href="https://youtu.be/4WWRZbYfCj8" target="_blank" rel="noopener" aria-label="Ep.09 YouTube">▶ YouTube</a></td></tr>
+          <tr><td>Ep.10</td><td>하나임(Oneness)</td>
+              <td><a href="https://youtu.be/9gqD4k6JldY" target="_blank" rel="noopener" aria-label="Ep.10 YouTube">▶ YouTube</a></td></tr>
+          <tr><td>Ep.11</td><td>로마 교황청과 기독교에 대한 반박</td>
+              <td><a href="https://youtu.be/yGp5yYpft7E" target="_blank" rel="noopener" aria-label="Ep.11 YouTube">▶ YouTube</a></td></tr>
+          <tr><td>Ep.12</td><td>여호와 vs. 예수의 신(성)</td>
+              <td><a href="https://youtu.be/iUudpAtrj9o" target="_blank" rel="noopener" aria-label="Ep.12 YouTube">▶ YouTube</a></td></tr>
+          <tr><td>Ep.13</td><td>십일조</td>
+              <td><a href="https://youtu.be/XKuveyzkE3Q" target="_blank" rel="noopener" aria-label="Ep.13 YouTube">▶ YouTube</a></td></tr>
+          <tr><td>Ep.14</td><td>사후세계</td>
+              <td><a href="https://youtu.be/GBHfoJ5WEO4" target="_blank" rel="noopener" aria-label="Ep.14 YouTube">▶ YouTube</a></td></tr>
+          <tr><td>Ep.15</td><td>모세의 출애굽</td>
+              <td><a href="https://youtu.be/ut7s66h2FZs" target="_blank" rel="noopener" aria-label="Ep.15 YouTube">▶ YouTube</a></td></tr>
+          <tr><td>Ep.16</td><td>다윗과 솔로몬 제국의 허상</td>
+              <td><a href="https://youtu.be/hPeLXPMlhA4" target="_blank" rel="noopener" aria-label="Ep.16 YouTube">▶ YouTube</a></td></tr>
         </tbody>
       </table>
     </section>
   </section>
+
+  <footer>
+    © BY Kim · New Consilience Group (NCG)
+  </footer>
+</div>
+
+<!-- 같은 페이지 내 전환(메인 ↔ 안내) 스크립트 -->
+
 </body>
 </html>
