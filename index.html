@@ -1,67 +1,77 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://bykim5710.github.io/series.kr/">
-
-  <!-- Open Graph -->
-  <meta property="og:url"         content="https://bykim5710.github.io/series.kr/">
-  <meta property="og:type"        content="website">
-  <meta property="og:title"       content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)">
-  <meta property="og:description" content="BY Kim — 각 회차 PDF와 YouTube 링크 모음">
-  <meta property="og:image"       content="https://bykim5710.github.io/series.kr/og-default.jpg">
-  <meta property="og:image:width"  content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:site_name"    content="series.kr">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)">
-  <meta name="twitter:description" content="BY Kim — 각 회차 PDF와 YouTube 링크 모음">
-  <meta name="twitter:image"       content="https://bykim5710.github.io/series.kr/og-default.jpg">
-
-  <!-- 기본 폰트 & 대비 좋은 다크 배경(가독성 위해) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body{
-      margin:0;
-      font:14px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Malgun Gothic, Helvetica, Arial, sans-serif;
-      background:#0b0b10; color:#eef3ff;
-    }
-    .wrap{max-width:960px;margin:28px auto;padding:16px}
-    a{color:#78b7ff;text-decoration:underline}
-    .hint{opacity:.7}
-    /* 카카오/모바일 미리보기용 강제 고정 폭 해제 */
-    @media (max-width: 768px){
-      table{table-layout:auto !important; width:100% !important}
-      col, colgroup, col[style*="width"]{width:auto !important}
-      th, td{
-        white-space:normal !important;
-        word-break:keep-all !important;
-        overflow-wrap:anywhere !important;
-        vertical-align:top !important;
-        line-height:1.6 !important;
-        text-align:left !important;
-      }
-    }
+    body { background-color:#0d1117; color:#e6edf3; font-family:Segoe UI, sans-serif; margin:0; padding:0; }
+    a { color:#58a6ff; text-decoration:none; }
+    .btn { background-color:#2b6cb0; color:white; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:bold; }
+    .card { background-color:#161b22; border-radius:12px; padding:16px; margin:16px; }
+    h1,h2 { color:white; }
+    table { width:100%; border-collapse:collapse; margin-top:12px; }
+    th,td { padding:8px 10px; border-bottom:1px solid #30363d; }
+    th { text-align:left; color:#9ecbff; }
+    tr:hover { background-color:#21262d; }
+    .pill { display:inline-block; padding:8px 16px; background-color:#238636; color:white; border-radius:50px; font-weight:bold; }
+    p.lead { color:#c9d1d9; font-size:15px; margin-top:4px; }
   </style>
 </head>
-<body>
-  <div class="wrap">
-    <noscript>
-      자바스크립트가 꺼져 있어 자동 이동이 되지 않습니다.<br>
-      <a href="series_guide.html">여기를 클릭</a>하여 시리즈 안내 페이지로 이동하세요.
-    </noscript>
-    <p class="hint">안내: 이 페이지는 공유 미리보기(OG/트위터 카드)만 담당하고, 화면은 자동으로 안내 페이지로 이동합니다.</p>
-  </div>
 
-  <!-- 실제 화면은 안내 페이지로 즉시 이동 -->
-  <script>
-    // 캐시 강제 무력화를 원하면 아래에 ?v=숫자 를 추가하세요 (예: 'series_guide.html?v=5')
-    location.replace('series_guide.html');
-  </script>
+<body>
+  <!-- 안내 섹션 -->
+  <section id="guide">
+    <header>
+      <h2>구성</h2>
+      <ul style="list-style:disc; padding-left:18px;">
+        <li>시리즈 안내 웹페이지 (현재 페이지)</li>
+        <li>
+          <a href="https://bykim5710.github.io/series.kr/NCG_Series_Guide_KR/NCG_Series_Guide_KR.docx" target="_blank" rel="noopener">
+            Word 매뉴얼 다운로드 (KR, DOCX)
+          </a>
+        </li>
+      </ul>
+      <p><a id="btnBack" class="pill" href="#main">메인 시리즈 페이지로 돌아가기</a></p>
+    </header>
+  </section>
+
+  <!-- 메인(표) 섹션 -->
+  <section id="main">
+    <header>
+      <h1>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</h1>
+      <p class="lead">BY Kim · New Consilience Group (NCG)</p>
+      <p><a id="btnGuide" class="pill" href="#guide">시리즈 안내 보기</a></p>
+    </header>
+
+    <section class="card">
+      <h2 class="section-title">YouTube 영상 목록</h2>
+      <table aria-label="시리즈 목록">
+        <thead>
+          <tr><th>회차</th><th>제목</th><th>링크</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Ep.01</td><td>김병윤 책과 신통신통회 소개</td>
+            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
+          <tr><td>Ep.02</td><td>종교혁명의 의미와 기독교 민주주의</td>
+            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
+          <tr><td>Ep.03</td><td>종교개혁을 넘어 기본으로 돌아가자</td>
+            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
+          <tr><td>Ep.04</td><td>반박문과 종교혁명선언서</td>
+            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
+          <tr><td>Ep.07–08</td><td>무유와 퀘크 – 공무영(空無靈)</td>
+            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
+          <tr><td>Ep.09–10</td><td>사후세계의 진실과 하나님</td>
+            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
+          <tr><td>Ep.11–12</td><td>로마 교황청에 대한 반박문 – 여호와 대 신성</td>
+            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
+          <tr><td>Ep.13–14</td><td>십일조와 사후세계 – 이승의 천국 구현</td>
+            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
+          <tr><td>Ep.15–16</td><td>모세의 출애굽과 다윗·솔로몬 제국의 허상</td>
+            <td><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">YouTube</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </section>
 </body>
 </html>
