@@ -1,201 +1,165 @@
+<!doctype html>
+<html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</title>
 
-  <title>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</title>
-  <link rel="canonical" href="https://bykim5710.github.io/NCG_Series_Guide_KR/series_guide.html" />
+<!-- ===== 스타일 ===== -->
+<style>
+:root {
+  --bg:#0b0b10;
+  --panel:#14172d;
+  --border:#2a2f4a;
+  --link:#4da3ff;
+  --text:#eef3ff;
+  --muted:#9aa3b2;
+}
 
-  <!-- OG (루트와 동일하게) -->
-  <meta property="og:url" content="https://bykim5710.github.io/NCG_Series_Guide_KR/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)" />
-  <meta property="og:description" content="BY Kim — 각 회차 PDF와 YouTube 링크 모음" />
-  <meta property="og:image" content="https://bykim5710.github.io/NCG_Series_Guide_KR/og-default-1200x630.jpg" />
-  <meta property="og:image:secure_url" content="https://bykim5710.github.io/NCG_Series_Guide_KR/og-default-1200x630.jpg" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+body {
+  background:var(--bg);
+  color:var(--text);
+  font:14px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Malgun Gothic,Helvetica,Arial,sans-serif;
+  margin:0;
+  padding:0;
+}
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)" />
-  <meta name="twitter:description" content="BY Kim — 각 회차 PDF와 YouTube 링크 모음" />
-  <meta name="twitter:image" content="https://bykim5710.github.io/NCG_Series_Guide_KR/og-default-1200x630.jpg" />
+.wrap { max-width:960px; margin:auto; padding:16px; }
 
-  <style>
-    :root{
-      --bg:#0b0b10; --panel:#141724; --text:#eef3ff; --muted:#9aa3b2;
-      --link:#78b7ff; --border:#27305e; --accent:#1a1f34;
-    }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0; background:var(--bg); color:var(--text);
-      font-family:system-ui, -apple-system, Segoe UI, Roboto, Apple SD Gothic Neo, Malgun Gothic, Helvetica, Arial, sans-serif;
-      line-height:1.6;
-    }
-    .wrap{ max-width: 960px; margin: 28px auto; padding: 0 16px; }
-    header{ margin: 0 0 16px; }
-    h1{ font-size: clamp(24px, 3.2vw, 34px); margin: 0 0 8px; }
-    .lead{ color: var(--muted); margin: 0 0 18px; }
-    .back{ margin: 8px 0 18px; text-align: right; }
-    .pill{ display:inline-block; padding:8px 12px; border:1px solid var(--border); border-radius:999px; text-decoration:none; color:var(--text); }
-    .pill:hover{ background:#1b2330; }
+h1, h3 { color:var(--text); margin:12px 0; }
+p { margin:6px 0; }
 
-    .card{ background:var(--panel); border:1px solid #212744; border-radius:12px; padding:14px; }
-    .section-title{ font-weight:700; margin: 0 0 12px; }
+a { color:var(--link); text-decoration:none; }
+a:hover { text-decoration:underline; }
 
-    /* ===== 표 기본 ===== */
-    table{
-      width:100%;
-      border-collapse: collapse;
-      background:var(--panel);
-      border:1px solid #212744;
-      border-radius:10px;
-      overflow:hidden;
-      table-layout: auto; /* 자동 레이아웃: 내용에 맞춰 폭 계산 */
-    }
-    th, td{
-      padding:12px 10px;
-      border-bottom: 1px solid #212744;
-      vertical-align: top;
-      white-space: normal;             /* 정상 줄바꿈 */
-      word-break: keep-all;            /* 한글 단어는 가능하면 통째 유지 */
-      overflow-wrap: anywhere;         /* 필요시 단어 경계에서 줄바꿈 */
-      line-height:1.6;
-      text-align: left;
-    }
-    tr:last-child td{ border-bottom:0; }
-    a{ color:var(--link); text-decoration: none; }
-    a:hover{ text-decoration: underline; }
+.pill {
+  display:inline-block;
+  padding:8px 12px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  text-decoration:none;
+  color:var(--text);
+}
+.pill:hover { background:#1b2330; }
 
-    /* 기존 고정폭(110px/220px) 해제 → 모바일에서 % 재배치 */
-    @media (max-width: 480px){
-      /* 열 폭 비율: 1열(세트)=20%, 2열(제목)=55%, 3열(링크)=25% */
-      th:nth-child(1), td:nth-child(1){ width:20% !important; }
-      th:nth-child(2), td:nth-child(2){ width:55% !important; } /* 제목 */
-      th:nth-child(3), td:nth-child(3){ width:25% !important; }
+.card {
+  background:var(--panel);
+  border:1px solid #212744;
+  border-radius:12px;
+  padding:14px;
+  margin-bottom:16px;
+}
 
-      /* 혹시 남아있는 px 고정폭 규칙 무력화 */
-      .col-set, .col-yt { width: auto !important; }
-    }
+.section-title { font-weight:700; margin:0 0 12px; }
 
-    footer{ color:var(--muted); font-size:12px; margin:20px 8px; text-align:right; }
-  </style>
+/* ===== 표 기본 ===== */
+table {
+  width:100%;
+  border-collapse:collapse;
+  background:var(--panel);
+  border:1px solid #212744;
+  border-radius:10px;
+  overflow:hidden;
+  table-layout:auto;
+}
+th, td {
+  padding:12px 10px;
+  border-bottom:1px solid #212744;
+  vertical-align:top;
+  white-space:normal;
+  word-break:keep-all;
+  overflow-wrap:anywhere;
+  line-height:1.6;
+  text-align:left;
+}
+tr:last-child td { border-bottom:0; }
+
+footer {
+  color:var(--muted);
+  font-size:12px;
+  margin:20px 8px;
+  text-align:right;
+}
+
+/* ===== 모바일 / 카카오톡 세로 깨짐 방지 ===== */
+@media (max-width:768px) {
+
+  table { table-layout:auto !important; width:100% !important; }
+
+  col, col[width], col[style*="width"] { width:auto !important; }
+
+  th, td {
+    white-space:normal !important;
+    word-break:keep-all !important;
+    overflow-wrap:anywhere !important;
+    vertical-align:top !important;
+    line-height:1.6 !important;
+    text-align:left !important;
+  }
+
+  .col-set, .col-yt, [class*="col-"] { width:auto !important; }
+
+  th:nth-child(1), td:nth-child(1){ width:25% !important; } /* 세트 */
+  th:nth-child(2), td:nth-child(2){ width:55% !important; } /* 제목 */
+  th:nth-child(3), td:nth-child(3){ width:20% !important; } /* 링크 */
+}
+</style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header>
-      <h1>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</h1>
-      <p class="lead">BY Kim — New Consilience Group (NCG)</p>
-      <p class="back">
-        🔙 <a class="pill" href="https://bykim5710.github.io/series.kr/" target="_blank" rel="noopener">메인 시리즈 페이지로 돌아가기</a>
-      </p>
-    </header>
+<div class="wrap">
 
-    <!-- 구성 -->
-    <section class="card" style="margin-bottom:16px">
-      <h3 class="section-title">구성</h3>
-      <ul style="margin:0;padding-left:18px">
-        <li>시리즈 안내 웹페이지(현재 페이지)</li>
-        <li>
-          <a href="https://bykim5710.github.io/NCG_Series_Guide_KR/NCG_Series_Guide_KR.docx" target="_blank" rel="noopener">
-            Word 매뉴얼 다운로드 (NCG_Series_Guide_KR.docx)
-          </a>
-        </li>
-      </ul>
-    </section>
+<header>
+  <h1>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</h1>
+  <p class="lead">By Kim — New Consilience Group (NCG)</p>
+  <p class="back">
+    <a class="pill" href="https://bykim5710.github.io/series.kr/" target="_blank" rel="noopener">
+      메인 시리즈 페이지로 돌아가기
+    </a>
+  </p>
+</header>
 
-    <!-- 표: 주요 세트 구성 -->
-    <section class="card">
-      <h3 class="section-title">주요 세트 구성</h3>
-      <table>
-        <thead>
-          <tr>
-            <th class="col-set">세트</th>
-            <th>제목</th>
-            <th class="col-yt">YouTube 링크</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>제1–2회</td>
-            <td>종교혁명의 의미와 기독교 민주주의</td>
-            <td>
-              <a href="https://youtu.be/o9kSstxgDaw" target="_blank" rel="noopener">제1회</a> /
-              <a href="https://youtu.be/gylO_88pDuc" target="_blank" rel="noopener">제2회</a>
-            </td>
-          </tr>
+<section class="card">
+  <h3 class="section-title">📘 구성</h3>
+  <ul style="margin:0;padding-left:18px">
+    <li>시리즈 안내 웹페이지 (현재 페이지)</li>
+    <li><a href="https://bykim5710.github.io/series.kr/NCG_Series_Guide_KR/NCG_Series_Guide_KR.docx" target="_blank" rel="noopener">
+      📄 NCG Series Guide (KR, DOCX)
+    </a></li>
+  </ul>
+</section>
 
-          <tr>
-            <td>제3–4회</td>
-            <td>종교개혁을 넘어 기본으로 돌아가자</td>
-            <td>
-              <a href="https://youtu.be/udOK740VFU8" target="_blank" rel="noopener">제3회</a> /
-              <a href="https://youtu.be/JK5RTxrVzPw" target="_blank" rel="noopener">제4회</a>
-            </td>
-          </tr>
+<section class="card">
+  <h3 class="section-title">🎥 시리즈 목록 (Ep.01–16)</h3>
+  <table>
+    <thead>
+      <tr><th>세트</th><th>제목</th><th>링크</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Ep.01</td><td>Introduction of BY Kim and NCG</td><td><a href="https://youtu.be/xqgxrhM1r24" target="_blank">▶ YouTube</a></td></tr>
+      <tr><td>Ep.02</td><td>종교혁명의 필요성 – 기독교민주주의</td><td><a href="https://youtu.be/uSlXqWci9sg" target="_blank">▶ YouTube</a></td></tr>
+      <tr><td>Ep.03</td><td>신의 본질 – 존재의 근원은 무엇인가</td><td><a href="https://youtu.be/5nO0v8XIb9g" target="_blank">▶ YouTube</a></td></tr>
+      <tr><td>Ep.04</td><td>영혼과 제로 – 존재의 이중 구조</td><td><a href="https://youtu.be/tzP5tBnsb1w" target="_blank">▶ YouTube</a></td></tr>
+      <tr><td>Ep.05</td><td>신과의 대화 – 인간의 자각</td><td><a href="https://youtu.be/pfLMK1D8P_E" target="_blank">▶ YouTube</a></td></tr>
+      <tr><td>Ep.06</td><td>종교혁명선언서 – 참된 신앙의 회복</td><td><a href="https://youtu.be/QCAsHEt5x_E" target="_blank">▶ YouTube</a></td></tr>
+      <tr><td>Ep.07</td><td>무유와 전이 – 존재의 본질을 말하다</td><td><a href="https://youtu.be/x9OrCqvKH28" target="_blank">▶ YouTube</a></td></tr>
+      <tr><td>Ep.08</td><td>과학과 종교의 통섭 – 전이의 구조를 해석하다</td><td><a href="https://youtu.be/k4T70gcQLNs" target="_blank">▶ YouTube</a></td></tr>
+      <tr><td>Ep.09</td><td>사후세계 – 존재의 전이를 넘어</td><td><a href="https://youtu.be/4WWRZbYfCj8" target="_blank">▶ YouTube</a></td></tr>
+      <tr><td>Ep.10</td><td>성경의 허구와 진실 – 역사적 사실을 파헤치다</td><td><a href="https://youtu.be/9gqD4k6JldY" target="_blank">▶ YouTube</a></td></tr>
+      <tr><td>Ep.11</td><td>로마 교황청과 기독교에 대한 열 가지 반박문</td><td><a href="https://youtu.be/yGp5yYpft7E" target="_blank">▶ YouTube</a></td></tr>
+      <tr><td>Ep.12</td><td>출애굽은 없었다 – 모세 신화의 허상</td><td><a href="https://youtu.be/7tGGKBsqghk" target="_blank">▶ YouTube</a></td></tr>
+      <tr><td>Ep.13</td><td>다윗과 솔로몬 제국의 허상 – 구약의 역사적 오류</td><td><a href="https://youtu.be/WiTOupqxrfw" target="_blank">▶ YouTube</a></td></tr>
+      <tr><td>Ep.14</td><td>사후세계는 존재하는가? – 신화의 해체</td><td><a href="https://youtu.be/hPeLXPMlhA4" target="_blank">▶ YouTube</a></td></tr>
+      <tr><td>Ep.15</td><td>Moses’ Exodus Was Not a Historical Fact</td><td><a href="https://youtu.be/7tGGKBsqghk" target="_blank">▶ YouTube</a></td></tr>
+      <tr><td>Ep.16</td><td>The Illusion of David and Solomon’s Empire</td><td><a href="https://youtu.be/WiTOupqxrfw" target="_blank">▶ YouTube</a></td></tr>
+    </tbody>
+  </table>
+</section>
 
-          <tr>
-            <td>제5–6회</td>
-            <td>반박문과 종교혁명선언서</td>
-            <td>
-              <a href="https://youtu.be/KtU5ww--3kg" target="_blank" rel="noopener">제5회</a> /
-              <a href="https://youtu.be/l-Cw7woND8I" target="_blank" rel="noopener">제6회</a>
-            </td>
-          </tr>
+<footer>
+  © Byung Youn Kim — New Consilience Group (NCG)
+</footer>
 
-          <tr>
-            <td>제7–8회</td>
-            <td>무유와 퀴크 – 공무영(空無零)</td>
-            <td>
-              <a href="https://youtu.be/1PmZOU5kS48" target="_blank" rel="noopener">제7회</a> /
-              <a href="https://youtu.be/Dw-fekBj8Z8" target="_blank" rel="noopener">제8회</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td>제9–10회</td>
-            <td>사후세계의 진실과 하나님</td>
-            <td>
-              <a href="https://youtu.be/8xgmPHNJ1g8" target="_blank" rel="noopener">제9회</a> /
-              <a href="https://youtu.be/vxlGrY75sXQ" target="_blank" rel="noopener">제10회</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td>제11–12회</td>
-            <td>로마 교황청에 대한 반박문 – 여호와 대. 신성</td>
-            <td>
-              <a href="https://youtu.be/xWXteiQq25E" target="_blank" rel="noopener">제11회</a> /
-              <a href="https://youtu.be/iUudpAtrj9o" target="_blank" rel="noopener">제12회</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td>제13–14회</td>
-            <td>십일조와 사후세계 – 이승의 천국 구현</td>
-            <td>
-              <a href="https://youtu.be/XKuveyzkE3Q" target="_blank" rel="noopener">제13회</a> /
-              <a href="https://youtu.be/GBHfoJ5WEO4" target="_blank" rel="noopener">제14회</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td>제15–16회</td>
-            <td>구약의 역사적 오류 – 출애굽과 다윗제국은 신화다</td>
-            <td>
-              <a href="https://youtu.be/ut7s66h2FZs" target="_blank" rel="noopener">제15회</a> /
-              <a href="https://youtu.be/hPeLXPMlhA4" target="_blank" rel="noopener">제16회</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <footer>
-      © NCG — BY Kim. 이 페이지의 링크만 갱신하면 항상 최신 상태로 유지됩니다.
-    </footer>
-  </div>
+</div>
 </body>
 </html>
