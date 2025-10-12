@@ -5,63 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</title>
 
-  <!-- Open Graph -->
-  <meta property="og:url"         content="https://bykim5710.github.io/NCG_Series.kr/" />
-  <meta property="og:type"        content="website" />
-  <meta property="og:title"       content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)" />
-  <meta property="og:description" content="BY Kim — 각 회차 영상과 보도자료(PDF) 모음" />
-  <meta property="og:image"       content="https://bykim5710.github.io/NCG_Series.kr/og-default.jpg" />
-  <meta property="og:image:width"  content="1200" />
+  <meta property="og:url" content="https://bykim5710.github.io/NCG_Series.kr/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)" />
+  <meta property="og:description" content="BY Kim — 각 회차 YouTube와 보도자료(모바일 바로 보기) 모음" />
+  <meta property="og:image" content="og-default.jpg" />
+  <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
   <style>
-  :root{
-    --bg:#0b0b10; --panel:#141724; --text:#eef3ff; --muted:#9aa3b2;
-    --link:#78b7ff; --border:#27305e; --line:#212744;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0; background:var(--bg); color:var(--text);
-    font:15px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Malgun Gothic,Helvetica,Arial,sans-serif;
-  }
-  .wrap{max-width:960px; margin:28px auto; padding:0 16px}
-  a{color:var(--link); text-decoration:none}
-  a:hover{text-decoration:underline}
-  header{margin:0 0 18px}
-  h1{margin:0 0 10px; font-size:clamp(22px,3.6vw,32px)}
-  .lead{color:var(--muted); margin:0 0 12px}
+    :root{
+      --bg:#0b0b10; --panel:#141724; --text:#eef3ff; --muted:#9aa3b2;
+      --link:#78b7ff; --line:#212744; --accent:#1f2740; --accent-h:#27345c;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text)}
+    body{font:15px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Malgun Gothic,Helvetica,Arial,sans-serif}
+    .wrap{max-width:1000px;margin:28px auto;padding:0 16px}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
 
-  .card{
-    background:var(--panel); border:1px solid var(--line);
-    border-radius:12px; padding:16px; margin:16px 0
-  }
-  .section-title{margin:0 0 12px; font-weight:700}
+    header{margin:0 0 18px}
+    h1{margin:0 0 10px;font-size:clamp(22px,3.6vw,32px)}
+    .lead{color:var(--muted);margin:0}
 
-  table{
-    width:100%; border-collapse:collapse; background:var(--panel);
-    border:1px solid var(--line); border-radius:10px; overflow:hidden;
-  }
-  th,td{
-    padding:12px 10px; border-bottom:1px solid var(--line); vertical-align:top;
-    white-space:normal; word-break:keep-all; overflow-wrap:anywhere; text-align:left; line-height:1.6
-  }
-  thead th{color:#b7bfd1}
-  tr:last-child td{border-bottom:0}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;margin:16px 0}
+    .section-title{margin:0 0 12px;font-weight:700}
 
-  /* 해시 스크롤 시 상단 여백 확보 */
-  #press-ko{ scroll-margin-top: 90px; }
+    table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+    th,td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left;white-space:normal;word-break:keep-all;overflow-wrap:anywhere}
+    thead th{color:#b7bfd1}
+    tr:last-child td{border-bottom:0}
 
-  @media (max-width: 768px){
-    th:nth-child(1),td:nth-child(1){width:24% !important}
-    th:nth-child(2),td:nth-child(2){width:56% !important}
-    th:nth-child(3),td:nth-child(3){width:20% !important}
-  }
+    #press-ko{scroll-margin-top:90px}
+
+    /* 내장 뷰어 박스 */
+    .viewer{display:none;margin-top:10px}
+    .viewer.active{display:block}
+    .viewer .bar{
+      display:flex;align-items:center;gap:8px;margin:0 0 8px;
+    }
+    .viewer .btn{
+      display:inline-flex;align-items:center;gap:6px;padding:8px 12px;
+      border:1px solid var(--line);border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;
+      font-weight:600
+    }
+    .viewer .btn:hover{background:var(--accent-h)}
+    .viewer .title{flex:1 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#cbd5e1}
+    .viewer iframe, .viewer embed, .viewer object{width:100%;height:70vh;border:0;background:#000;border-radius:10px}
+
+    @media (max-width:768px){
+      th:nth-child(1),td:nth-child(1){width:25%}
+      th:nth-child(2),td:nth-child(2){width:55%}
+      th:nth-child(3),td:nth-child(3){width:20%}
+      .viewer iframe, .viewer embed, .viewer object{height:75vh}
+    }
   </style>
 </head>
-
 <body>
 <div class="wrap">
-
   <header>
     <h1>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</h1>
     <p class="lead">BY Kim — New Consilience Group (NCG)</p>
@@ -83,11 +85,11 @@
           <td>
             <a href="https://youtu.be/o9kSstxgDaw" target="_blank" rel="noopener">제1회</a>
             &nbsp;·&nbsp;
-            <a href="#press-ko" class="jump-press" title="보도자료로 이동">보도자료</a>
+            <a href="#press-ko" title="보도자료로 이동">보도자료</a>
           </td>
         </tr>
 
-        <!-- 제2차 -->
+        <!-- 제2차: 2–4회 -->
         <tr>
           <td>제2차</td>
           <td>왜 종교혁명인가 (완성편)</td>
@@ -98,7 +100,7 @@
           </td>
         </tr>
 
-        <!-- 제3차 -->
+        <!-- 제3차: 5·6·11회 -->
         <tr>
           <td>제3차</td>
           <td>기독교계에 보낸 편지와 종교혁명선언서</td>
@@ -109,7 +111,7 @@
           </td>
         </tr>
 
-        <!-- 제4차 -->
+        <!-- 제4차: 7·9·14회 -->
         <tr>
           <td>제4차</td>
           <td>사후세계란 무엇인가? 사후세계의 재정의</td>
@@ -120,7 +122,7 @@
           </td>
         </tr>
 
-        <!-- 제5차 -->
+        <!-- 제5차: 8·10회 -->
         <tr>
           <td>제5차</td>
           <td>무유, 공무영 그리고 하나임</td>
@@ -130,7 +132,7 @@
           </td>
         </tr>
 
-        <!-- 제6차 -->
+        <!-- 제6차: 12–13회 -->
         <tr>
           <td>제6차</td>
           <td>여호와와 십일조</td>
@@ -140,7 +142,7 @@
           </td>
         </tr>
 
-        <!-- 제7차 -->
+        <!-- 제7차: 15–16회 -->
         <tr>
           <td>제7차</td>
           <td>출애굽과 다윗·솔로몬 제국 신화 해체</td>
@@ -154,36 +156,83 @@
     </table>
   </section>
 
-  <!-- 보도자료 (표 밖, 별도 섹션) -->
+  <!-- 보도자료 -->
   <section id="press-ko" class="card">
     <h2 class="section-title">📄 보도자료</h2>
-    <ul style="margin:.2rem 0 .4rem 1.1rem; line-height:1.9">
-      <!-- PDF들이 index.html과 같은 폴더에 있으므로 '파일명만' 사용 -->
-      <li><a href="soul-and-zero_ko.pdf" target="_blank" rel="noopener noreferrer">영과영</a></li>
-      <li><a href="oneness-god_ko.pdf"   target="_blank" rel="noopener noreferrer">하나님과의 대화</a></li>
-      <li><a href="nosome_ko.pdf"       target="_blank" rel="noopener noreferrer">무유(無有)</a></li>
+    <ul style="margin:.2rem 0 .6rem 1.1rem; line-height:1.9">
+      <!-- 파일명은 index.html과 같은 폴더에 있는 PDF 기준입니다 -->
+      <li>
+        <a class="open-pdf" href="soul-and-zero_ko.pdf">영과영 — 모바일 바로 보기</a>
+        &nbsp;·&nbsp;
+        <a class="open-new" href="soul-and-zero_ko.pdf" target="_blank" rel="noopener">새 탭</a>
+      </li>
+      <li>
+        <a class="open-pdf" href="oneness-god_ko.pdf">하나님과의 대화 — 모바일 바로 보기</a>
+        &nbsp;·&nbsp;
+        <a class="open-new" href="oneness-god_ko.pdf" target="_blank" rel="noopener">새 탭</a>
+      </li>
+      <li>
+        <a class="open-pdf" href="nosome_ko.pdf">무유(無有) — 모바일 바로 보기</a>
+        &nbsp;·&nbsp;
+        <a class="open-new" href="nosome_ko.pdf" target="_blank" rel="noopener">새 탭</a>
+      </li>
     </ul>
+
+    <!-- 내장 뷰어 (같은 페이지에서 바로 보기) -->
+    <div class="viewer" id="viewerBox">
+      <div class="bar">
+        <div class="title" id="viewerTitle">문서 제목</div>
+        <a class="btn" id="btnOpenNew" target="_blank" rel="noopener">새 탭으로</a>
+        <a class="btn" id="btnDownload" download>다운로드</a>
+      </div>
+      <iframe id="viewerFrame" allow="fullscreen"></iframe>
+      <embed id="viewerEmbed" type="application/pdf" hidden />
+      <object id="viewerObject" type="application/pdf" hidden></object>
+    </div>
   </section>
 
-  <footer style="color:#9aa3b2; font-size:12px; text-align:right; margin:22px 6px 8px">
+  <footer>
     © BY Kim · New Consilience Group (NCG)
   </footer>
-
 </div>
 
-<!-- 해시(보도자료) 스크롤 폴백 -->
 <script>
-  document.addEventListener('click', function(e){
-    const a = e.target.closest('a.jump-press');
-    if(!a) return;
-    e.preventDefault();
-    const el = document.getElementById('press-ko');
-    if(el && el.scrollIntoView){
-      el.scrollIntoView({behavior:'smooth', block:'start'});
-    }else{
-      location.hash = '#press-ko';
+  (function(){
+    // 보도자료 링크 클릭 시 같은 페이지 내 뷰어로 표시
+    const links = document.querySelectorAll('a.open-pdf');
+    const box = document.getElementById('viewerBox');
+    const frame = document.getElementById('viewerFrame');
+    const embed = document.getElementById('viewerEmbed');
+    const obj   = document.getElementById('viewerObject');
+    const title = document.getElementById('viewerTitle');
+    const btnNew = document.getElementById('btnOpenNew');
+    const btnDown = document.getElementById('btnDownload');
+
+    function openInViewer(href){
+      const file = href;
+      const label = decodeURIComponent(file.split('/').pop());
+      title.textContent = label;
+      btnNew.href = file;
+      btnDown.href = file;
+      btnDown.setAttribute('download', label);
+
+      // 우선 iframe으로 시도, 일부 환경 대비 embed/object도 준비
+      frame.src = file + '#view=FitH';
+      embed.src = file;
+      obj.data  = file;
+      box.classList.add('active');
+
+      // 보도자료 섹션으로 스크롤
+      document.getElementById('press-ko').scrollIntoView({behavior:'smooth', block:'start'});
     }
-  });
+
+    links.forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault();
+        openInViewer(a.getAttribute('href'));
+      });
+    });
+  })();
 </script>
 </body>
 </html>
