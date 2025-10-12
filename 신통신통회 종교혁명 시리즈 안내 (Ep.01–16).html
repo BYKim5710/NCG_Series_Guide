@@ -83,7 +83,7 @@
           <td>
             <a href="https://youtu.be/o9kSstxgDaw" target="_blank" rel="noopener">제1회</a>
             &nbsp;·&nbsp;
-            <a href="#press-ko" title="보도자료로 이동">보도자료</a>
+            <a href="#press-ko" class="jump-press" title="보도자료로 이동">보도자료</a>
           </td>
         </tr>
 
@@ -158,9 +158,10 @@
   <section id="press-ko" class="card">
     <h2 class="section-title">📄 보도자료</h2>
     <ul style="margin:.2rem 0 .4rem 1.1rem; line-height:1.9">
-      <li><a href="https://bykim5710.github.io/press/ko/soul-and-zero_ko.pdf" target="_blank" rel="noopener noreferrer">영과영</a></li>
-      <li><a href="https://bykim5710.github.io/press/ko/oneness-god_ko.pdf"   target="_blank" rel="noopener noreferrer">하나님과의 대화</a></li>
-      <li><a href="https://bykim5710.github.io/press/ko/nosome_ko.pdf"       target="_blank" rel="noopener noreferrer">무유(無有)</a></li>
+      <!-- PDF들이 index.html과 같은 폴더에 있으므로 '파일명만' 사용 -->
+      <li><a href="soul-and-zero_ko.pdf" target="_blank" rel="noopener noreferrer">영과영</a></li>
+      <li><a href="oneness-god_ko.pdf"   target="_blank" rel="noopener noreferrer">하나님과의 대화</a></li>
+      <li><a href="nosome_ko.pdf"       target="_blank" rel="noopener noreferrer">무유(無有)</a></li>
     </ul>
   </section>
 
@@ -169,5 +170,20 @@
   </footer>
 
 </div>
+
+<!-- 해시(보도자료) 스크롤 폴백 -->
+<script>
+  document.addEventListener('click', function(e){
+    const a = e.target.closest('a.jump-press');
+    if(!a) return;
+    e.preventDefault();
+    const el = document.getElementById('press-ko');
+    if(el && el.scrollIntoView){
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+    }else{
+      location.hash = '#press-ko';
+    }
+  });
+</script>
 </body>
 </html>
