@@ -30,13 +30,11 @@
     a:hover{text-decoration:underline}
     h1{margin:0 0 12px; font-size:clamp(22px,3.6vw,32px)}
     .lead{color:var(--muted); margin:0 0 18px}
-
     .card{
       background:var(--panel); border:1px solid var(--line);
       border-radius:12px; padding:16px; margin:16px 0
     }
     .section-title{margin:0 0 12px; font-weight:800}
-
     table{
       width:100%; border-collapse:collapse; background:var(--panel);
       border:1px solid var(--line); border-radius:10px; overflow:hidden;
@@ -49,33 +47,30 @@
     }
     thead th{color:#b7bfd1}
     tr:last-child td{border-bottom:0}
-
     .btn{
       display:inline-block; padding:8px 12px; border:1px solid var(--border);
       border-radius:10px; background:var(--btn); color:var(--text); text-decoration:none;
       margin:0 4px 4px 0; font-weight:600
     }
     .btn:hover{background:var(--btnHover)}
-    .tag{display:inline-block; padding:2px 8px; border:1px solid var(--border); border-radius:999px; background:#11192a; color:#bcd2ff; font-size:12px}
-
-    .embed-preview{display:block}
-    @media (max-width: 820px){
-      .embed-preview{display:none}
-    }
-
     footer{color:var(--muted); font-size:12px; margin:22px 6px 8px; text-align:right}
+    #viewer{display:none; width:100%; height:90vh; border:none; margin-top:12px}
+    .back-btn{
+      display:none; margin-top:10px; padding:6px 12px; border-radius:8px;
+      border:1px solid var(--border); background:var(--btn);
+      color:var(--text); cursor:pointer;
+    }
   </style>
 </head>
 
 <body>
-<div class="wrap">
+<div class="wrap" id="main">
 
   <header>
     <h1>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</h1>
     <p class="lead">BY Kim — New Consilience Group (NCG)</p>
   </header>
 
-  <!-- 주요 차수 표 -->
   <section class="card" aria-label="주요 차수 요약">
     <h2 class="section-title">주요 차수 요약</h2>
     <table aria-label="차수/제목/링크">
@@ -84,102 +79,71 @@
       </thead>
       <tbody>
         <tr>
-          <td>제1차</td>
-          <td>신통신통회와 종교혁명 개관</td>
-          <td>
-            <a href="https://youtu.be/o9kSstxgDaw" rel="noopener">제1회</a>
-            &nbsp;·&nbsp;<a class="tag" href="#press">보도자료</a>
-          </td>
+          <td>제1차</td><td>신통신통회와 종교혁명 개관</td>
+          <td><a href="https://youtu.be/o9kSstxgDaw" rel="noopener">제1회</a></td>
         </tr>
         <tr>
-          <td>제2차</td>
-          <td>왜 종교혁명인가 (완성편)</td>
-          <td>
-            <a href="https://youtu.be/gylO_88pDuc" rel="noopener">제2회</a> /
-            <a href="https://youtu.be/udOK740VFU8" rel="noopener">제3회</a> /
-            <a href="https://youtu.be/JK5RTxrVzPw" rel="noopener">제4회</a>
-          </td>
+          <td>제2차</td><td>왜 종교혁명인가 (완성편)</td>
+          <td><a href="https://youtu.be/gylO_88pDuc">제2회</a> / <a href="https://youtu.be/udOK740VFU8">제3회</a> / <a href="https://youtu.be/JK5RTxrVzPw">제4회</a></td>
         </tr>
         <tr>
-          <td>제3차</td>
-          <td>기독교계에 보낸 편지와 종교혁명선언서</td>
-          <td>
-            <a href="https://youtu.be/KtU5ww--3kg" rel="noopener">제5회</a> /
-            <a href="https://youtu.be/l-Cw7woND8I" rel="noopener">제6회</a> /
-            <a href="https://youtu.be/xWXteiQq25E" rel="noopener">제11회</a>
-          </td>
+          <td>제3차</td><td>기독교계에 보낸 편지와 종교혁명선언서</td>
+          <td><a href="https://youtu.be/KtU5ww--3kg">제5회</a> / <a href="https://youtu.be/l-Cw7woND8I">제6회</a> / <a href="https://youtu.be/xWXteiQq25E">제11회</a></td>
         </tr>
         <tr>
-          <td>제4차</td>
-          <td>사후세계란 무엇인가? 사후세계의 재정의</td>
-          <td>
-            <a href="https://youtu.be/1PmZOU5kS48" rel="noopener">제7회</a> /
-            <a href="https://youtu.be/8xgmPHNJ1g8" rel="noopener">제9회</a> /
-            <a href="https://youtu.be/GBHfoJ5WEO4" rel="noopener">제14회</a>
-          </td>
+          <td>제4차</td><td>사후세계란 무엇인가? 사후세계의 재정의</td>
+          <td><a href="https://youtu.be/1PmZOU5kS48">제7회</a> / <a href="https://youtu.be/8xgmPHNJ1g8">제9회</a> / <a href="https://youtu.be/GBHfoJ5WEO4">제14회</a></td>
         </tr>
         <tr>
-          <td>제5차</td>
-          <td>무유, 공무영 그리고 하나임</td>
-          <td>
-            <a href="https://youtu.be/Dw-fekBj8Z8" rel="noopener">제8회</a> /
-            <a href="https://youtu.be/vxlGrY75sXQ" rel="noopener">제10회</a>
-          </td>
+          <td>제5차</td><td>무유, 공무영 그리고 하나임</td>
+          <td><a href="https://youtu.be/Dw-fekBj8Z8">제8회</a> / <a href="https://youtu.be/vxlGrY75sXQ">제10회</a></td>
         </tr>
         <tr>
-          <td>제6차</td>
-          <td>여호와와 십일조</td>
-          <td>
-            <a href="https://youtu.be/iUudpAtrj9o" rel="noopener">제12회</a> /
-            <a href="https://youtu.be/XKuveyzkE3Q" rel="noopener">제13회</a>
-          </td>
+          <td>제6차</td><td>여호와와 십일조</td>
+          <td><a href="https://youtu.be/iUudpAtrj9o">제12회</a> / <a href="https://youtu.be/XKuveyzkE3Q">제13회</a></td>
         </tr>
         <tr>
-          <td>제7차</td>
-          <td>출애굽과 다윗·솔로몬 제국 신화 해체</td>
-          <td>
-            <a href="https://youtu.be/ut7s66h2FZs" rel="noopener">제15회</a> /
-            <a href="https://youtu.be/hPeLXPMlhA4" rel="noopener">제16회</a>
-          </td>
+          <td>제7차</td><td>출애굽과 다윗·솔로몬 제국 신화 해체</td>
+          <td><a href="https://youtu.be/ut7s66h2FZs">제15회</a> / <a href="https://youtu.be/hPeLXPMlhA4">제16회</a></td>
         </tr>
       </tbody>
     </table>
   </section>
 
-  <!-- 보도자료 -->
-  <section id="press" class="card" aria-label="보도자료">
+  <section class="card" id="press">
     <h2 class="section-title">📄 보도자료</h2>
-    <p class="lead" style="margin-top:6px">
-      인앱 브라우저에서는 다운로드가 제한될 수 있습니다.
-      우측 상단 <b>⋮</b> → <b>기본 브라우저로 열기</b>를 누르면 가장 안정적입니다.
-    </p>
+    <p class="lead">인앱 브라우저에서는 다운로드가 제한될 수 있습니다.<br>우측 상단 <b>⋮</b> → <b>기본 브라우저로 열기</b>를 누르면 가장 안정적입니다.</p>
 
     <ul style="margin:10px 0 10px 18px">
-      <li>
-        <a href="./viewer.html?file=./soul-and-zero_ko.pdf">영과영 — 바로 보기</a>
-        &nbsp;·&nbsp;<a href="./soul-and-zero_ko.pdf" rel="noopener">직접 열기</a>
-      </li>
-      <li>
-        <a href="./viewer.html?file=./oneness-god_ko.pdf">하나님과의 대화 — 바로 보기</a>
-        &nbsp;·&nbsp;<a href="./oneness-god_ko.pdf" rel="noopener">직접 열기</a>
-      </li>
-      <li>
-        <a href="./viewer.html?file=./nosome_ko.pdf">무유(無有) — 바로 보기</a>
-        &nbsp;·&nbsp;<a href="./nosome_ko.pdf" rel="noopener">직접 열기</a>
-      </li>
+      <li><a href="#" onclick="openPDF('soul-and-zero_ko.pdf')">영과영 — 바로 보기</a> · <a href="./soul-and-zero_ko.pdf" rel="noopener">직접 열기</a></li>
+      <li><a href="#" onclick="openPDF('oneness-god_ko.pdf')">하나님과의 대화 — 바로 보기</a> · <a href="./oneness-god_ko.pdf" rel="noopener">직접 열기</a></li>
+      <li><a href="#" onclick="openPDF('nosome_ko.pdf')">무유(無有) — 바로 보기</a> · <a href="./nosome_ko.pdf" rel="noopener">직접 열기</a></li>
     </ul>
-
-    <!-- PC 미리보기(모바일은 숨김) -->
-    <div class="embed-preview" style="margin-top:12px">
-      <div style="margin:8px 0 6px;font-weight:700">soul-and-zero_ko.pdf</div>
-      <a class="btn" href="./soul-and-zero_ko.pdf" rel="noopener">직접 열기</a>
-      <a class="btn" href="./soul-and-zero_ko.pdf" download>다운로드</a>
-      <iframe title="영과영 미리보기" style="width:100%;height:82vh;border:1px solid #212744;border-radius:10px;margin-top:8px"
-        src="./viewer.html?file=./soul-and-zero_ko.pdf"></iframe>
-    </div>
   </section>
 
   <footer>© BY Kim · New Consilience Group (NCG)</footer>
 </div>
+
+<!-- 🔹 통합 PDF Viewer -->
+<iframe id="viewer"></iframe>
+<button class="back-btn" id="backBtn" onclick="closeViewer()">메인으로 돌아가기</button>
+
+<script>
+function openPDF(fileName) {
+  document.getElementById("main").style.display = "none";
+  const viewer = document.getElementById("viewer");
+  viewer.src = "https://docs.google.com/gview?embedded=1&url=" +
+    encodeURIComponent(location.origin + location.pathname.replace(/[^/]+$/, '') + fileName);
+  viewer.style.display = "block";
+  document.getElementById("backBtn").style.display = "inline-block";
+}
+
+function closeViewer() {
+  document.getElementById("viewer").style.display = "none";
+  document.getElementById("backBtn").style.display = "none";
+  document.getElementById("main").style.display = "block";
+}
+</script>
+
 </body>
 </html>
