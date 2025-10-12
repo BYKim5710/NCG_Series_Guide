@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</title>
 
-  <!-- Open Graph (공유 썸네일) -->
-  <meta property="og:url"         content="https://bykim5710.github.io/series.kr/NCG_Series_Guide_KR/" />
+  <!-- Open Graph -->
+  <meta property="og:url"         content="https://bykim5710.github.io/NCG_Series.kr/" />
   <meta property="og:type"        content="website" />
   <meta property="og:title"       content="신통신통회 종교혁명 시리즈 안내 (Ep.01–16)" />
-  <meta property="og:description" content="BY Kim — 각 회차 PDF와 YouTube 링크 모음" />
-  <meta property="og:image"       content="https://bykim5710.github.io/series.kr/og-default.jpg" />
+  <meta property="og:description" content="BY Kim — 각 회차 YouTube & PDF 모음" />
+  <meta property="og:image"       content="https://bykim5710.github.io/NCG_Series.kr/og-default.jpg" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -32,8 +32,8 @@
   h1{margin:0 0 10px; font-size:clamp(22px,3.6vw,32px)}
   .lead{color:var(--muted); margin:0 0 12px}
   .pill{
-    display:inline-block; padding:8px 14px; border:1px solid var(--border);
-    border-radius:999px; background:var(--panel); color:var(--text)
+    display:inline-block; padding:6px 12px; border:1px solid var(--border);
+    border-radius:999px; background:var(--panel); color:var(--text); font-size:14px
   }
   .pill:hover{background:#1b2333}
 
@@ -58,20 +58,17 @@
 
   /* 푸터 */
   footer{color:var(--muted); font-size:12px; margin:22px 6px 8px; text-align:right}
+
   /* JS 없는 해시 전환 */
   #guide{ display:none !important; }
   #main { display:block !important; }
   #guide:target{ display:block !important; }
-  #guide:target ~ #main{ display:none !important; }   /* ← 이 줄이 반드시 활성화 */
-
- /* 메인이 타깃일 때 보강(옵션) */
+  #guide:target ~ #main{ display:none !important; }
   #main:target{ display:block !important; }
   #guide:target ~ #main:target{ display:block !important; }
-    
-    /* 인앱 브라우저 호환: hidden 강제 */
- [hidden]{ display:none !important; }
+  [hidden]{ display:none !important; }
 
-  /* 모바일(카카오 인앱 포함) 세로 깨짐 방지 */
+  /* 모바일 */
   @media (max-width: 768px){
     table{table-layout:auto !important; width:100% !important}
     col, col[width], col[style*="width"]{width:auto !important}
@@ -79,7 +76,6 @@
       white-space:normal !important; word-break:keep-all !important; overflow-wrap:anywhere !important;
       vertical-align:top !important; line-height:1.6 !important; text-align:left !important
     }
-    .col-set,.col-yt,[class*="col-"]{width:auto !important}
     th:nth-child(1),td:nth-child(1){width:25% !important} /* 회차 */
     th:nth-child(2),td:nth-child(2){width:55% !important} /* 제목 */
     th:nth-child(3),td:nth-child(3){width:20% !important} /* 링크 */
@@ -90,16 +86,16 @@
 <body>
 <div class="wrap">
 
-<!-- 안내(Guide) 섹션 -->D
+  <!-- 안내(Guide) 섹션 -->
   <section id="guide">
     <header>
       <h2>구성</h2>
       <ul style="list-style:disc; padding-left:18px; margin:0 0 10px">
         <li>시리즈 안내 웹페이지 (현재 페이지)</li>
-        <li><a href="https://bykim5710.github.io/series.kr/NCG_Series_Guide_KR/NCG_Series_Guide_KR.docx"
+        <li><a href="https://bykim5710.github.io/NCG_Series.kr/NCG_Series_Guide_KR.docx"
                target="_blank" rel="noopener">Word 매뉴얼 다운로드 (KR, DOCX)</a></li>
       </ul>
-      <p><a id="btnBack" class="pill" href="#main">메인 시리즈 페이지로 돌아가기</a></p>
+      <p><a class="pill" href="#main">메인 시리즈 페이지로 돌아가기</a></p>
     </header>
   </section>
   
@@ -108,116 +104,122 @@
     <header>
       <h1>신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</h1>
       <p class="lead">BY Kim — New Consilience Group (NCG)</p>
-      <p><a id="btnGuide" class="pill" href="#guide">시리즈 안내 보기</a></p>
+      <p><a class="pill" href="#guide">시리즈 안내 보기</a></p>
     </header>
 
     <!-- 안내 박스: 표 위에 노출 -->
-<div class="card" style="padding:12px 16px; background:#fffbe6; border:1px solid #f5e6a3; border-radius:10px; margin:14px 0;">
-  <p style="margin:0;">
-    📺 영상 보기: <a href="https://youtu.be/o9kSstxgDaw" target="_blank" rel="noopener noreferrer">제1회</a>&nbsp;&nbsp;
-    📚 전체 시리즈: <a href="https://bykim5710.github.io/NCG_Series.kr/" target="_blank" rel="noopener noreferrer">바로가기</a>&nbsp;&nbsp;
-    📄 보도자료: <a href="#press-ko"></a>
-  </p>
-</div>
+    <div class="card" style="padding:12px 16px; background:#fffbe6; border:1px solid #f5e6a3; border-radius:10px; margin:14px 0;">
+      <p style="margin:0;">
+        🎬 영상 보기: <a href="https://youtu.be/o9kSstxgDaw" target="_blank" rel="noopener noreferrer">제1회</a>
+        &nbsp;&nbsp;
+        📚 전체 시리즈: <a href="https://bykim5710.github.io/NCG_Series.kr/" target="_blank" rel="noopener noreferrer">바로가기</a>
+        &nbsp;&nbsp;
+        📄 보도자료: <a href="#press-ko">바로가기</a>
+      </p>
+    </div>
+
     <!-- 광고용 요약 표 (차수 / 제목 / 링크) -->
-<section class="card" style="margin:18px 0">
-  <h2 class="section-title">주요 차수 요약</h2>
-  <table aria-label="광고용 요약 표">
-    <thead>
-      <tr><th>차수</th><th>제목</th><th>링크</th></tr>
-    </thead>
-    <tbody>
-  <!-- 제1차: 제1회 + 보도자료 -->
-<tr>
-  <td>제1차</td>
-  <td>신통신통회와 종교혁명 개관</td>
-  <td>
-    <a href="https://youtu.be/kjqeeHIO_B0" target="_blank" rel="noopener">제1회</a>
-  <!-- 보도자료 섹션 시작 -->
-<section id="press-ko">
-  <h2>📄 보도자료</h2>
-  <ul>
-    <li><a href="https://bykim5710.github.io/NCG_Series_Guide_KR/soul-and-zero_ko.pdf" target="_blank" rel="noopener noreferrer">영과영</a></li>
-    <li><a href="https://bykim5710.github.io/NCG_Series_Guide_KR/oneness-god_ko.pdf" target="_blank" rel="noopener noreferrer">하나님과의 대화</a></li>
-    <li><a href="https://bykim5710.github.io/NCG_Series_Guide_KR/nosome_ko.pdf" target="_blank" rel="noopener noreferrer">무유(無有)</a></li>
-  </ul>
-</section>
-  </td>
-</tr>
+    <section class="card" style="margin:18px 0">
+      <h2 class="section-title">주요 차수 요약</h2>
+      <table aria-label="광고용 요약 표">
+        <thead>
+          <tr><th>차수</th><th>제목</th><th>링크</th></tr>
+        </thead>
+        <tbody>
 
-<!-- 제2차: 2–4회 -->
-<tr>
-  <td>제2차</td>
-  <td>왜 종교혁명인가 (완성편)</td>
-  <td>
-    <a href="https://youtu.be/gylO_88pDuc" target="_blank" rel="noopener">제2회</a> /
-    <a href="https://youtu.be/udOK740VFU8" target="_blank" rel="noopener">제3회</a> /
-    <a href="https://youtu.be/JK5RTxrVzPw" target="_blank" rel="noopener">제4회</a>
-  </td>
-</tr>
+          <!-- 제1차: 제1회 + 보도자료 버튼(앵커) -->
+          <tr>
+            <td>제1차</td>
+            <td>신통신통회와 종교혁명 개관</td>
+            <td>
+              <a href="https://youtu.be/kjqeeHIO_B0" target="_blank" rel="noopener">제1회</a>
+              &nbsp;·&nbsp;
+              <a class="pill" href="#press-ko" style="padding:4px 10px; font-size:13px">보도자료</a>
+            </td>
+          </tr>
 
-<!-- 제3차: 5·6·11회 -->
-<tr>
-  <td>제3차</td>
-  <td>기독교계에 보낸 편지와 종교혁명선언서</td>
-  <td>
-    <a href="https://youtu.be/KtU5ww--3kg" target="_blank" rel="noopener">제5회</a> /
-    <a href="https://youtu.be/l-Cw7woND8I" target="_blank" rel="noopener">제6회</a> /
-    <a href="https://youtu.be/xWXteiQq25E" target="_blank" rel="noopener">제11회</a>
-  </td>
-</tr>
+          <!-- 제2차: 2–4회 -->
+          <tr>
+            <td>제2차</td>
+            <td>왜 종교혁명인가 (완성편)</td>
+            <td>
+              <a href="https://youtu.be/gylO_88pDuc" target="_blank" rel="noopener">제2회</a> /
+              <a href="https://youtu.be/udOK740VFU8" target="_blank" rel="noopener">제3회</a> /
+              <a href="https://youtu.be/JK5RTxrVzPw" target="_blank" rel="noopener">제4회</a>
+            </td>
+          </tr>
 
-<!-- 제4차: 7·9·14회 -->
-<tr>
-  <td>제4차</td>
-  <td>사후세계란 무엇인가? 사후세계의 재정의</td>
-  <td>
-    <a href="https://youtu.be/1PmZOU5kS48" target="_blank" rel="noopener">제7회</a> /
-    <a href="https://youtu.be/8xgmPHNJ1g8" target="_blank" rel="noopener">제9회</a> /
-    <a href="https://youtu.be/GBHfoJ5WEO4" target="_blank" rel="noopener">제14회</a>
-  </td>
-</tr>
+          <!-- 제3차: 5·6·11회 -->
+          <tr>
+            <td>제3차</td>
+            <td>기독교계에 보낸 편지와 종교혁명선언서</td>
+            <td>
+              <a href="https://youtu.be/KtU5ww--3kg" target="_blank" rel="noopener">제5회</a> /
+              <a href="https://youtu.be/l-Cw7woND8I" target="_blank" rel="noopener">제6회</a> /
+              <a href="https://youtu.be/xWXteiQq25E" target="_blank" rel="noopener">제11회</a>
+            </td>
+          </tr>
 
-<!-- 제5차: 8·10회 -->
-<tr>
-  <td>제5차</td>
-  <td>무유, 공무영 그리고 하나임</td>
-  <td>
-    <a href="https://youtu.be/Dw-fekBj8Z8" target="_blank" rel="noopener">제8회</a> /
-    <a href="https://youtu.be/vxlGrY75sXQ" target="_blank" rel="noopener">제10회</a>
-  </td>
-</tr>
+          <!-- 제4차: 7·9·14회 -->
+          <tr>
+            <td>제4차</td>
+            <td>사후세계란 무엇인가? 사후세계의 재정의</td>
+            <td>
+              <a href="https://youtu.be/1PmZOU5kS48" target="_blank" rel="noopener">제7회</a> /
+              <a href="https://youtu.be/8xgmPHNJ1g8" target="_blank" rel="noopener">제9회</a> /
+              <a href="https://youtu.be/GBHfoJ5WEO4" target="_blank" rel="noopener">제14회</a>
+            </td>
+          </tr>
 
-<!-- 제6차: 12–13회 -->
-<tr>
-  <td>제6차</td>
-  <td>여호와와 십일조</td>
-  <td>
-    <a href="https://youtu.be/iUudpAtrj9o" target="_blank" rel="noopener">제12회</a> /
-    <a href="https://youtu.be/XKuveyzkE3Q" target="_blank" rel="noopener">제13회</a>
-  </td>
-</tr>
+          <!-- 제5차: 8·10회 -->
+          <tr>
+            <td>제5차</td>
+            <td>무유, 공무영 그리고 하나임</td>
+            <td>
+              <a href="https://youtu.be/Dw-fekBj8Z8" target="_blank" rel="noopener">제8회</a> /
+              <a href="https://youtu.be/vxlGrY75sXQ" target="_blank" rel="noopener">제10회</a>
+            </td>
+          </tr>
 
-<!-- 제7차: 15–16회 -->
-<tr>
-  <td>제7차</td>
-  <td>출애굽과 다윗·솔로몬 제국 신화 해체</td>
-  <td>
-    <a href="https://youtu.be/ut7s66h2FZs" target="_blank" rel="noopener">제15회</a> /
-    <a href="https://youtu.be/hPeLXPMlhA4" target="_blank" rel="noopener">제16회</a>
-  </td>
-</tr>
-</tbody>
-메모
-  </table>
-</section>
+          <!-- 제6차: 12–13회 -->
+          <tr>
+            <td>제6차</td>
+            <td>여호와와 십일조</td>
+            <td>
+              <a href="https://youtu.be/iUudpAtrj9o" target="_blank" rel="noopener">제12회</a> /
+              <a href="https://youtu.be/XKuveyzkE3Q" target="_blank" rel="noopener">제13회</a>
+            </td>
+          </tr>
 
-  <footer>
-    © BY Kim · New Consilience Group (NCG)
-  </footer>
+          <!-- 제7차: 15–16회 -->
+          <tr>
+            <td>제7차</td>
+            <td>출애굽과 다윗·솔로몬 제국 신화 해체</td>
+            <td>
+              <a href="https://youtu.be/ut7s66h2FZs" target="_blank" rel="noopener">제15회</a> /
+              <a href="https://youtu.be/hPeLXPMlhA4" target="_blank" rel="noopener">제16회</a>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 보도자료 (앵커 대상) -->
+    <section id="press-ko" class="card" style="scroll-margin-top:90px;">
+      <h2 class="section-title">📄 보도자료</h2>
+      <ul style="margin:.4rem 0 0 .2rem; line-height:1.9;">
+        <li><a href="/soul-and-zero_ko.pdf" target="_blank" rel="noopener noreferrer">영과영</a></li>
+        <li><a href="/oneness-god_ko.pdf"   target="_blank" rel="noopener noreferrer">하나님과의 대화</a></li>
+        <li><a href="/nosome_ko.pdf"        target="_blank" rel="noopener noreferrer">무유(無有)</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      © BY Kim · New Consilience Group (NCG)
+    </footer>
+  </section>
 </div>
-
-<!-- 같은 페이지 내 전환(메인 ↔ 안내) 스크립트 -->
 
 </body>
 </html>
