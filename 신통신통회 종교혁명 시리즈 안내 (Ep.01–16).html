@@ -14,6 +14,7 @@
       --muted: #9ca3af;
       --accent: #38bdf8;
     }
+
     body {
       background: var(--bg);
       color: var(--text);
@@ -22,11 +23,13 @@
       margin: 0;
       padding: 0;
     }
+
     .wrap {
       max-width: 900px;
       margin: 0 auto;
       padding: 24px;
     }
+
     h1, h2 { color: var(--accent); }
     section.card {
       background: var(--panel);
@@ -35,7 +38,7 @@
       margin-top: 20px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     }
-    .badge { font-weight: bold; color: var(--accent); margin-bottom: 4px; }
+
     a { color: var(--accent); text-decoration: none; }
     a.btn {
       display: inline-block;
@@ -47,19 +50,29 @@
       font-weight: 600;
       border-radius: 8px;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
       color: var(--text);
+      font-size: 15px;
     }
+
     th, td {
       border-bottom: 1px solid var(--border);
       padding: 6px 4px;
       text-align: left;
-      font-size: 14px;
     }
+
     th { color: var(--accent); }
-    footer { color: var(--muted); font-size: 12px; text-align: right; margin-top: 20px; }
+
+    footer {
+      color: var(--muted);
+      font-size: 12px;
+      text-align: right;
+      margin-top: 20px;
+    }
+
     html { scroll-behavior: smooth; }
     #press, #endorsements { scroll-margin-top: 12px; }
   </style>
@@ -68,42 +81,82 @@
 <body>
 <div class="wrap" id="main">
   <header>
-    <h1>📜 신통신통회 종교혁명 시리즈 안내 (Ep.01–16)</h1>
+    <h1>📜 신통신통회 종교혁명 시리즈 안내 (제1~7차)</h1>
     <p class="lead">BY Kim – New Consilience Group (NCG)</p>
   </header>
 
- <!-- 차수별 영상 -->
-<section class="card" id="episodes" aria-label="차수별 영상 안내">
-  <h2 class="section-title">📺 차수별 영상</h2>
-  <table>
-    <thead>
-      <tr><th>차수</th><th>제목</th><th>링크</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>1차수</td><td>신통신통회와 종교혁명 개요</td><td><a href="https://youtu.be/o9kSstxpDqw" target="_blank" rel="noopener noreferrer">▶ YouTube</a></td></tr>
-      <tr><td>2차수</td><td>종교혁명의 필요성 – 기독교민주주의</td><td><a href="https://youtu.be/gY10_88pDuc" target="_blank" rel="noopener noreferrer">▶ YouTube</a></td></tr>
-      <tr><td>3차수</td><td>하나님의 창조는 진화의 시작</td><td><a href="https://youtu.be/ud0K74QVFUI" target="_blank" rel="noopener noreferrer">▶ YouTube</a></td></tr>
-      <tr><td>4차수</td><td>무유와 전이</td><td><a href="https://youtu.be/JkSRIxrV2Pw" target="_blank" rel="noopener noreferrer">▶ YouTube</a></td></tr>
-      <tr><td>5차수</td><td>신통신통회 선언문</td><td><a href="https://youtu.be/ktUSwu--3kg" target="_blank" rel="noopener noreferrer">▶ YouTube</a></td></tr>
-      <tr><td>6차수</td><td>종교의 기원과 인간의식</td><td><a href="https://youtu.be/l-CwZwoNDBI" target="_blank" rel="noopener noreferrer">▶ YouTube</a></td></tr>
-      <tr><td>7차수</td><td>무유와 전이 (심화)</td><td><a href="https://youtu.be/XWtxEJqQ25E" target="_blank" rel="noopener noreferrer">▶ YouTube</a></td></tr>
-      <tr><td>8차수</td><td>과학과 종교의 통섭 – 전이의 구조</td><td><a href="https://youtu.be/Ba7sZq5ZQVE" target="_blank" rel="noopener noreferrer">▶ YouTube</a></td></tr>
-      <tr><td>9차수</td><td>사후세계 – 존재의 전이를 넘어</td><td><a href="https://youtu.be/i9VweVbCQnA" target="_blank" rel="noopener noreferrer">▶ YouTube</a></td></tr>
-      <tr><td>10차수</td><td>예수의 신성과 구약의 율법</td><td><a href="https://youtu.be/Z0bGv5uKuPo" target="_blank" rel="noopener noreferrer">▶ YouTube</a></td></tr>
-      <tr><td>11차수</td><td>로마 교황청에 대한 열 가지 반박문</td><td><a href="https://youtu.be/yE2MBkZfHP8" target="_blank" rel="noopener noreferrer">▶ YouTube</a></td></tr>
-      <tr><td>12차수</td><td>여호와 vs 예수의 신(성)</td><td><a href="https://youtu.be/iUudpAtrj9o" target="_blank" rel="noopener noreferrer">▶ YouTube</a></td></tr>
-      <tr><td>13차수</td><td>십일조의 기원과 허구성</td><td><a href="https://youtu.be/XKuveyzkE3Q" target="_blank" rel="noopener noreferrer">▶ YouTube</a></td></tr>
-      <tr><td>14차수</td><td>사후세계는 존재하는가?</td><td><a href="https://youtu.be/GBHfoJ5WEO4" target="_blank" rel="noopener noreferrer">▶ YouTube</a></td></tr>
-      <tr><td>15차수</td><td>모세의 출애굽은 역사적 사실인가?</td><td><a href="https://youtu.be/ut7s66h2FZs" target="_blank" rel="noopener noreferrer">▶ YouTube</a></td></tr>
-      <tr><td>16차수</td><td>다윗과 솔로몬 제국의 허상</td><td><a href="https://youtu.be/hPeLXPMlhA4" target="_blank" rel="noopener noreferrer">▶ YouTube</a></td></tr>
-    </tbody>
-  </table>
-</section>
-  
+  <!-- 차수별 영상 -->
+  <section class="card" id="episodes" aria-label="차수/제목/링크">
+    <h2 class="section-title">📺 차수별 영상 안내</h2>
+    <table aria-label="차수/제목/링크">
+      <thead><tr><th>차수</th><th>제목</th><th>링크</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>제1차</td>
+          <td>신통신통회와 종교혁명 개관</td>
+          <td>
+            <a href="https://youtu.be/o9kSstxgDaw" rel="noopener">제1회</a>
+            &nbsp;·&nbsp;<a class="tag" href="#press" aria-label="보도자료 섹션으로 이동">보도자료</a>
+          </td>
+        </tr>
+        <tr>
+          <td>제2차</td>
+          <td>왜 종교혁명인가 (완성편)</td>
+          <td>
+            <a href="https://youtu.be/gylO_88pDuc">제2회</a> /
+            <a href="https://youtu.be/udOK740VFU8">제3회</a> /
+            <a href="https://youtu.be/JK5RTxrVzPw">제4회</a>
+          </td>
+        </tr>
+        <tr>
+          <td>제3차</td>
+          <td>기독교계에 보낸 편지와 종교혁명선언서</td>
+          <td>
+            <a href="https://youtu.be/KtU5ww--3kg">제5회</a> /
+            <a href="https://youtu.be/l-Cw7woND8I">제6회</a> /
+            <a href="https://youtu.be/xWXteiQq25E">제11회</a>
+          </td>
+        </tr>
+        <tr>
+          <td>제4차</td>
+          <td>사후세계란 무엇인가? 사후세계의 재정의</td>
+          <td>
+            <a href="https://youtu.be/1PmZOU5kS48">제7회</a> /
+            <a href="https://youtu.be/8xgmPHNJ1g8">제9회</a> /
+            <a href="https://youtu.be/GBHfoJ5WEO4">제14회</a>
+          </td>
+        </tr>
+        <tr>
+          <td>제5차</td>
+          <td>무유, 공무영 그리고 하나임</td>
+          <td>
+            <a href="https://youtu.be/Dw-fekBj8Z8">제8회</a> /
+            <a href="https://youtu.be/vxlGrY75sXQ">제10회</a>
+          </td>
+        </tr>
+        <tr>
+          <td>제6차</td>
+          <td>여호와와 십일조</td>
+          <td>
+            <a href="https://youtu.be/iUudpAtrj9o">제12회</a> /
+            <a href="https://youtu.be/XKuveyzkE3Q">제13회</a>
+          </td>
+        </tr>
+        <tr>
+          <td>제7차</td>
+          <td>출애굽과 다윗·솔로몬 제국 신화 해체</td>
+          <td>
+            <a href="https://youtu.be/ut7s66h2FZs">제15회</a> /
+            <a href="https://youtu.be/hPeLXPMlhA4">제16회</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
   <!-- 보도자료 -->
   <section class="card" id="press" aria-label="보도자료">
     <h2 class="section-title">📑 보도자료</h2>
-    <p class="lead">인앱 브라우저에서는 다운로드가 제한될 수 있습니다.<br>우측 상단 <b>⋮</b> → <b>기본 브라우저로 열기</b>를 누르면 가장 안정적입니다.</p>
     <ul style="margin:10px 0 10px 18px">
       <li><a href="#" onclick="openPDF('soul-and-zero_ko.pdf')">영과영 – 바로 보기</a> · <a href="./soul-and-zero_ko.pdf" rel="noopener noreferrer">직접 열기</a></li>
       <li><a href="#" onclick="openPDF('oneness-god_ko.pdf')">하나님과의 대화 – 바로 보기</a> · <a href="./oneness-god_ko.pdf" rel="noopener noreferrer">직접 열기</a></li>
@@ -114,7 +167,6 @@
   <!-- 추천사 -->
   <section id="endorsements" class="card" aria-label="추천사">
     <h2 class="section-title">🖋 추천사</h2>
-
     <article class="endorse">
       <div class="badge">영과영</div>
       <blockquote cite="./soul-and-zero-review_ko.pdf">
@@ -136,7 +188,6 @@
 
   <footer>© BY Kim · New Consilience Group (NCG)</footer>
 
-  <!-- PDF 뷰어 -->
   <iframe id="viewer"></iframe>
   <button class="btn" id="backBtn" onclick="closeViewer()">메인으로 돌아가기</button>
 </div>
