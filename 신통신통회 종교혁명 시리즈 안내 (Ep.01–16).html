@@ -133,39 +133,52 @@
   }
 
   // 보도자료 "바로 보기" – 전면 오버레이
-  function openPDF(filename, e){
-    if(e) e.preventDefault();
+  function openPDF(filename, e) {
+  if (e) e.preventDefault();
 
-    // 인앱 브라우저는 새창이 가장 안전(앱 정책상 다운로드로 처리될 수 있음)
-    if(isInAppBrowser()){
-      window.open(filename, '_blank', 'noopener');
-      return false;
-    }
+  // 📱 모바일/인앱: PDF.js → 실패 시 Google Viewer로 폴백
+  if (isMobile() || isInAppBrowser()) {
+    const url   = absoluteUrl(filename);
+    const pdfjs = 'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + encodeURIComponent(url);
+    const win   = window.open(pdfjs, '_blank', 'noopener');
 
-    const wrap = document.getElementById('pdfWrap');
-    const obj  = document.getElementById('pdfObj');
-    const fb   = document.getElementById('pdfFallback');
-
-    obj.data = filename;
-    wrap.hidden = false;
-    if(fb) fb.href = filename;
-
-    // 임베드 실패 폴백: 0.8초 내 렌더링 징후 없으면 새 창으로
+    // 1.2초 내 탭 차단/오류 발생 시 Google Viewer로 폴백
     setTimeout(() => {
-      const likelyRendered = obj.getBoundingClientRect().height > 50;
-      if(!likelyRendered) window.open(filename, '_blank', 'noopener');
-    }, 800);
+      try {
+        if (!win || win.closed) {
+          openViaGoogleViewer(filename);
+        }
+      } catch (e) {
+        openViaGoogleViewer(filename);
+      }
+    }, 1200);
 
     return false;
   }
 
-  function closeViewer(){
-    const wrap = document.getElementById('pdfWrap');
-    const obj  = document.getElementById('pdfObj');
-    obj.data = '';
-    wrap.hidden = true;
-    window.scrollTo({top:0, behavior:'smooth'});
-  }
+  // 💻 PC용 기본 임베드
+  const wrap = document.getElementById('pdfWrap');
+  const obj  = document.getElementById('pdfObj');
+  const fb   = document.getElementById('pdfFallback');
+
+  obj.data = filename;
+  wrap.hidden = false;
+  if (fb) fb.href = filename;
+
+  // 임베드 실패 대비
+  setTimeout(() => {
+    const likelyRendered = obj.getBoundingClientRect().height > 50;
+    if (!likelyRendered) window.open(filename, '_blank', 'noopener');
+  }, 1000);
+
+  return false;
+}
+  
+  function openViaGoogleViewer(filename){
+  const url = absoluteUrl(filename);
+  const viewer = 'https://docs.google.com/gview?embedded=1&url=' + encodeURIComponent(url);
+  window.open(viewer, '_blank', 'noopener');
+}
 
   // "보도자료로 이동" 앵커 스무스 스크롤 보장
   document.querySelectorAll('a[href="#press"]').forEach(a=>{
