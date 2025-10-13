@@ -143,39 +143,85 @@
 
   <footer>© BY Kim · New Consilience Group (NCG)</footer>
 
-  <iframe id="viewer"></iframe>
-  <button class="btn" id="backBtn" onclick="closeViewer()">메인으로 돌아가기</button>
+  <div id="pdfWrap" hidden>
+  <object id="pdfObj" data="" type="application/pdf" width="100%" height="90vh">
+    <p style="padding:12px">
+      이 브라우저는 PDF 임베드를 지원하지 않습니다.
+     <a id="pdfFallback" href="#" rel="noopener noreferrer" target="_blank">새 창에서 열기</a>
+    </p>
+  </object>
+</div>
+
+<button class="btn" id="backBtn" onclick="closeViewer()" style="display:none">메인으로 돌아가기</button>
 </div>
 
 <script>
+function isInAppBrowser() {
+  const ua = navigator.userAgent || '';
+  return /(KAKAOTALK|FBAN|FBAV|Instagram|NAVER)/i.test(ua);
+}
+
+function smoothScrollTo(el) {
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      const top = el.getBoundingClientRect().top + window.scrollY - 20;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+}
+
 function openPDF(filename, e) {
   if (e) e.preventDefault();
 
+  // 인앱 브라우저는 새창이 가장 안전
   if (isInAppBrowser()) {
     window.open(filename, '_blank', 'noopener');
     return false;
   }
 
-  const viewer = document.getElementById('viewer');
-  if (!viewer) {
-    window.open(filename, '_blank', 'noopener');
-    return false;
-  }
+  const wrap = document.getElementById('pdfWrap');
+  const obj  = document.getElementById('pdfObj');
+  const back = document.getElementById('backBtn');
+  const fb   = document.getElementById('pdfFallback');
 
-  viewer.src = filename;
-  viewer.style.display = 'block';
-  document.getElementById('backBtn').style.display = 'inline-block';
+  // object로 임베드
+  obj.data = filename;
+  wrap.hidden = false;
+  back.style.display = 'inline-block';
+  if (fb) fb.href = filename;
 
-  // 레이아웃 반영 후 스크롤 이동 (setTimeout 대신 rAF 2번)
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      const top = viewer.getBoundingClientRect().top + window.scrollY - 20; // ← 대문자 Y 유지
-      window.scrollTo({ top, behavior: 'smooth' });
-    });
-  });
+  // 화면 이동
+  smoothScrollTo(wrap);
 
-  return false; // 앵커 기본동작 방지
+  // 임베드 실패 폴백: 1초 내 렌더링 징후 없으면 새 창
+  setTimeout(() => {
+    const rendered = obj.getBoundingClientRect().height > 50;
+    if (!rendered) window.open(filename, '_blank', 'noopener');
+  }, 1000);
+
+  return false; // 앵커 기본 동작 방지
 }
+
+function closeViewer() {
+  const wrap = document.getElementById('pdfWrap');
+  const obj  = document.getElementById('pdfObj');
+  const back = document.getElementById('backBtn');
+
+  obj.data = '';
+  wrap.hidden = true;
+  back.style.display = 'none';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// "#press" 스무스 이동 (보도자료 앵커 고정)
+document.querySelectorAll('a[href="#press"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const el = document.getElementById('press');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
 </script>
+
 </body>
 </html>
