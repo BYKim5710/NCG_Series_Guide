@@ -113,9 +113,9 @@
   <section class="card" id="press" aria-label="보도자료">
     <h2 class="section-title">📑 보도자료</h2>
     <ul style="margin:10px 0 10px 18px">
-      <li><a href="#" onclick="openPDF('soul-and-zero_ko.pdf')">영과영 – 바로 보기</a> · <a href="./soul-and-zero_ko.pdf" rel="noopener noreferrer">직접 열기</a></li>
-      <li><a href="#" onclick="openPDF('oneness-god_ko.pdf')">하나님과의 대화 – 바로 보기</a> · <a href="./oneness-god_ko.pdf" rel="noopener noreferrer">직접 열기</a></li>
-      <li><a href="#" onclick="openPDF('nosome_ko.pdf')">무유(無有) – 바로 보기</a> · <a href="./nosome_ko.pdf" rel="noopener noreferrer">직접 열기</a></li>
+      <li><a href="#" onclick="openPDF('soul-and-zero_ko.pdf', event)">영과영 – 바로 보기</a> · <a href="./soul-and-zero_ko.pdf" rel="noopener noreferrer">직접 열기</a></li>
+      <li><a href="#" onclick="openPDF('oneness-god_ko.pdf', event)">하나님과의 대화 – 바로 보기</a> · <a href="./oneness-god_ko.pdf" rel="noopener noreferrer">직접 열기</a></li>
+      <li><a href="#" onclick="openPDF('nosome_ko.pdf', event)">무유(無有) – 바로 보기</a> · <a href="./nosome_ko.pdf" rel="noopener noreferrer">직접 열기</a></li>
     </ul>
   </section>
 
@@ -148,22 +148,34 @@
 </div>
 
 <script>
-function openPDF(filename) {
-  const viewer = document.getElementById("viewer");
+function openPDF(filename, e) {
+  if (e) e.preventDefault();
+
+  if (isInAppBrowser()) {
+    window.open(filename, '_blank', 'noopener');
+    return false;
+  }
+
+  const viewer = document.getElementById('viewer');
+  if (!viewer) {
+    window.open(filename, '_blank', 'noopener');
+    return false;
+  }
+
   viewer.src = filename;
-  viewer.style.display = "block";
-  document.getElementById("backBtn").style.display = "block";
-  window.scrollTo({ top: viewer.offsetTop - 20, behavior: "smooth" });
+  viewer.style.display = 'block';
+  document.getElementById('backBtn').style.display = 'inline-block';
+
+  // 레이아웃 반영 후 스크롤 이동 (setTimeout 대신 rAF 2번)
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      const top = viewer.getBoundingClientRect().top + window.scrollY - 20; // ← 대문자 Y 유지
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+
+  return false; // 앵커 기본동작 방지
 }
-function closeViewer() {
-  const viewer = document.getElementById("viewer");
-  viewer.src = "";
-  viewer.style.display = "none";
-  document.getElementById("backBtn").style.display = "none";
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-document.getElementById("viewer").style.display = "none";
-document.getElementById("backBtn").style.display = "none";
 </script>
 </body>
 </html>
