@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>신통신통회 종교혁명 시리즈 안내</title>
   <style>
-    :root{
+    :root {
       --bg:#0a0a0a; --panel:#111827; --text:#f9fafb;
       --muted:#9ca3af; --accent:#38bdf8; --btn:#2563eb; --border:#1e293b;
     }
@@ -27,181 +27,124 @@
     html{scroll-behavior:smooth}
     #press,#endorsements{scroll-margin-top:12px}
 
-    /* 전면 오버레이 PDF 뷰어 */
+    /* PDF 오버레이 */
     .pdf-overlay{position:fixed;inset:0;background:rgba(9,12,20,.96);z-index:9999;display:none;padding-top:56px}
     .pdf-overlay[hidden]{display:none}
     .pdf-overlay:not([hidden]){display:block}
     #pdfObj{width:100%;height:calc(100vh - 80px);border:none;background:#111}
     #backBtn{position:fixed;top:12px;right:12px;z-index:10000}
     .pdf-fallback{position:absolute;left:12px;bottom:12px;color:#cbd5e1;margin:0}
+    /* 모바일 전용 숨김 */
+    .mobile-hide{display:inline-block}
+    @media (max-width:768px){
+      .mobile-hide{display:none!important}
+    }
   </style>
 </head>
 
 <body>
-<div class="wrap" id="main">
+<div class="wrap">
   <header>
     <h1>📜 신통신통회 종교혁명 시리즈 안내 (제1~7차)</h1>
     <p class="lead">BY Kim · New Consilience Group (NCG)</p>
   </header>
 
-  <!-- 차수별 영상 (제1~7차) -->
-  <section class="card" id="episodes" aria-label="차수/제목/링크">
-    <h2 class="section-title">📺 차수별 영상</h2>
-    <table aria-label="차수/제목/링크">
-      <thead><tr><th>차수</th><th>제목</th><th>링크</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>제1차</td>
-          <td>신통신통회와 종교혁명 개관</td>
-          <td>
-            <a href="https://youtu.be/o9kSstxgDaw" rel="noopener">제1회</a>
-            &nbsp;·&nbsp;<a class="tag" href="#press" aria-label="보도자료 섹션으로 이동">보도자료</a>
-          </td>
-        </tr>
-        <tr><td>제2차</td><td>왜 종교혁명인가 (완성편)</td><td><a href="https://youtu.be/gylO_88pDuc">제2회</a> / <a href="https://youtu.be/udOK740VFU8">제3회</a> / <a href="https://youtu.be/JK5RTxrVzPw">제4회</a></td></tr>
-        <tr><td>제3차</td><td>기독교계에 보낸 편지와 종교혁명선언서</td><td><a href="https://youtu.be/KtU5ww--3kg">제5회</a> / <a href="https://youtu.be/l-Cw7woND8I">제6회</a> / <a href="https://youtu.be/xWXteiQq25E">제11회</a></td></tr>
-        <tr><td>제4차</td><td>사후세계란 무엇인가? 사후세계의 재정의</td><td><a href="https://youtu.be/1PmZOU5kS48">제7회</a> / <a href="https://youtu.be/8xgmPHNJ1g8">제9회</a> / <a href="https://youtu.be/GBHfoJ5WEO4">제14회</a></td></tr>
-        <tr><td>제5차</td><td>무유, 공무영 그리고 하나임</td><td><a href="https://youtu.be/Dw-fekBj8Z8">제8회</a> / <a href="https://youtu.be/vxlGrY75sXQ">제10회</a></td></tr>
-        <tr><td>제6차</td><td>여호와와 십일조</td><td><a href="https://youtu.be/iUudpAtrj9o">제12회</a> / <a href="https://youtu.be/XKuveyzkE3Q">제13회</a></td></tr>
-        <tr><td>제7차</td><td>출애굽과 다윗·솔로몬 제국 신화 해체</td><td><a href="https://youtu.be/ut7s66h2FZs">제15회</a> / <a href="https://youtu.be/hPeLXPMlhA4">제16회</a></td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- 보도자료 -->
-  <section class="card" id="press" aria-label="보도자료">
-    <h2 class="section-title">📑 보도자료</h2>
-    <p class="lead">인앱 브라우저에서는 PDF가 다운로드로 열릴 수 있습니다. 상단 메뉴에서 <b>기본 브라우저로 열기</b>를 권장합니다.</p>
-    <ul style="margin:10px 0 10px 18px">
+  <section class="card" id="press">
+    <h2>📑 보도자료</h2>
+    <p class="lead">모바일에서는 “직접 열기” 버튼이 숨겨지고 “바로 보기”만 가능합니다.</p>
+    <ul style="margin-left:18px">
       <li>
         <a href="#" onclick="openPDF('soul-and-zero_ko.pdf', event)">영과영 – 바로 보기</a>
-        &nbsp;·&nbsp;<a href="./soul-and-zero_ko.pdf" rel="noopener noreferrer" target="_blank">직접 열기</a>
+        <span class="mobile-hide">· <a href="./soul-and-zero_ko.pdf" target="_blank" rel="noopener">직접 열기</a></span>
       </li>
       <li>
         <a href="#" onclick="openPDF('oneness-god_ko.pdf', event)">하나님과의 대화 – 바로 보기</a>
-        &nbsp;·&nbsp;<a href="./oneness-god_ko.pdf" rel="noopener noreferrer" target="_blank">직접 열기</a>
+        <span class="mobile-hide">· <a href="./oneness-god_ko.pdf" target="_blank" rel="noopener">직접 열기</a></span>
       </li>
       <li>
         <a href="#" onclick="openPDF('nosome_ko.pdf', event)">무유(無有) – 바로 보기</a>
-        &nbsp;·&nbsp;<a href="./nosome_ko.pdf" rel="noopener noreferrer" target="_blank">직접 열기</a>
+        <span class="mobile-hide">· <a href="./nosome_ko.pdf" target="_blank" rel="noopener">직접 열기</a></span>
       </li>
     </ul>
   </section>
 
-  <!-- 추천사 -->
-  <section id="endorsements" class="card" aria-label="추천사">
-    <h2 class="section-title">🖋 추천사</h2>
-
-    <article class="endorse">
+  <section id="endorsements" class="card">
+    <h2>🖋 추천사</h2>
+    <article>
       <div class="badge">영과영</div>
-      <blockquote cite="./soul-and-zero-review_ko.pdf">
-        <p>“영과 영은 제목부터 심상치 않다. 저자는 방대한 종교적 주제들을 다루며, 비판적 종교연구자이자 종교인으로서 우리 모두를 &lt;진리애의 항해&gt;로 초대한다. 나를 사로잡고 놓지 않는 책이다.”</p>
-        <footer>— 이종록 교수(한일장신대학교 신학부 구약학)</footer>
+      <blockquote>
+        “영과 영은 제목부터 심상치 않다. 방대한 종교 주제를 다루며 비판적 시각을 제시한다.”
       </blockquote>
-      <p><a class="btn" href="./soul-and-zero-review_ko.pdf" target="_blank" rel="noopener noreferrer">📄 영과영 추천사 전문(PDF)</a></p>
+      <a class="btn" href="#" onclick="openPDF('soul-and-zero-review_ko.pdf', event)">📄 영과영 추천사 전문(PDF)</a>
     </article>
 
-    <article class="endorse">
+    <article>
       <div class="badge">하나님과의 대화</div>
-      <blockquote cite="./oneness-god-review_ko.pdf">
-        <p>“저자가 들인 노력이 마르크스가 『자본론』을 쓰기 위해 기울인 노력에 버금간다는 느낌을 받았다. 성서를 비판하기 위해 누구보다 열심히 읽고 탐독했으며, 방대한 원고를 수차례 첨삭해 마무리했다.”</p>
-        <footer>— 이종록 교수(한일장신대학교 신학부 구약학)</footer>
+      <blockquote>
+        “저자는 마르크스가 『자본론』을 쓴 노력을 능가할 열정으로 성서를 분석했다.”
       </blockquote>
-      <p><a class="btn" href="./oneness-god-review_ko.pdf" target="_blank" rel="noopener noreferrer">📄 하나님과의 대화 추천사 전문(PDF)</a></p>
+      <a class="btn" href="#" onclick="openPDF('oneness-god-review_ko.pdf', event)">📄 하나님과의 대화 추천사 전문(PDF)</a>
     </article>
   </section>
 
   <footer>© BY Kim · New Consilience Group (NCG)</footer>
 
-  <!-- 전면 오버레이 PDF 뷰어 -->
   <div id="pdfWrap" class="pdf-overlay" hidden>
     <object id="pdfObj" data="" type="application/pdf"></object>
     <button class="btn" id="backBtn" onclick="closeViewer()">메인으로 돌아가기</button>
     <p class="pdf-fallback">
-      이 브라우저는 PDF 임베드를 지원하지 않을 수 있습니다.
-      <a id="pdfFallback" href="#" rel="noopener noreferrer" target="_blank">새 창에서 열기</a>
+      브라우저가 PDF 임베드를 지원하지 않습니다.
+      <a id="pdfFallback" href="#" target="_blank" rel="noopener">새 창에서 열기</a>
     </p>
   </div>
 </div>
 
 <script>
-  /* ------------ 환경 판별 유틸 ------------- */
-  function isInAppBrowser() {
-    const ua = navigator.userAgent || '';
-    // 카카오/페북/인스타/네이버 인앱
-    return /(KAKAOTALK|FBAN|FBAV|Instagram|NAVER)/i.test(ua);
-  }
-  function isMobile() {
-    const ua = navigator.userAgent || '';
-    // iPadOS13+는 Mac처럼 표기 → 터치포인트로 보정
-    const iPadOS = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
-    return /Android|iPhone|iPad|iPod/i.test(ua) || iPadOS;
-  }
-  function absoluteUrl(path) { return new URL(path, location.href).href; }
+function isMobile(){
+  const ua = navigator.userAgent || '';
+  const iPadOS = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+  return /Android|iPhone|iPad|iPod/i.test(ua) || iPadOS;
+}
+function isInAppBrowser(){
+  const ua = navigator.userAgent || '';
+  return /(KAKAOTALK|FBAN|FBAV|Instagram|NAVER)/i.test(ua);
+}
+function absoluteUrl(p){return new URL(p,location.href).href;}
+function openViaPdfJsViewer(f){
+  const u=absoluteUrl(f);
+  return window.open('https://mozilla.github.io/pdf.js/web/viewer.html?file='+encodeURIComponent(u),'_blank','noopener');
+}
+function openViaGoogleViewer(f){
+  const u=absoluteUrl(f);
+  return window.open('https://docs.google.com/gview?embedded=1&url='+encodeURIComponent(u),'_blank','noopener');
+}
 
-  /* ------------ 외부 웹뷰어(모바일용) ------------- */
-  function openViaPdfJsViewer(filename) {
-    const url = absoluteUrl(filename);
-    const viewer = 'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + encodeURIComponent(url);
-    return window.open(viewer, '_blank', 'noopener');
-  }
-  function openViaGoogleViewer(filename) {
-    const url = absoluteUrl(filename);
-    const viewer = 'https://docs.google.com/gview?embedded=1&url=' + encodeURIComponent(url);
-    return window.open(viewer, '_blank', 'noopener');
-  }
-
-  /* ------------ 메인 열기 함수 ------------- */
-  function openPDF(filename, e) {
-    if (e) e.preventDefault();
-
-    // 📱 모바일·인앱: PDF.js → 실패 시 Google Viewer 폴백
-    if (isMobile() || isInAppBrowser()) {
-      const win = openViaPdfJsViewer(filename);
-      setTimeout(() => {
-        try {
-          if (!win || win.closed) openViaGoogleViewer(filename);
-        } catch (_) {
-          openViaGoogleViewer(filename);
-        }
-      }, 900);
-      return false;
-    }
-
-    // 💻 PC: 전면 오버레이 임베드
-    const wrap = document.getElementById('pdfWrap');
-    const obj  = document.getElementById('pdfObj');
-    const fb   = document.getElementById('pdfFallback');
-
-    obj.data = filename;
-    wrap.hidden = false;
-    if (fb) fb.href = filename;
-
-    // 임베드 실패 대비(일부 데스크톱 환경)
-    setTimeout(() => {
-      const ok = obj.getBoundingClientRect().height > 50;
-      if (!ok) window.open(filename, '_blank', 'noopener');
-    }, 1000);
-
+function openPDF(f,e){
+  if(e) e.preventDefault();
+  if(isMobile()||isInAppBrowser()){
+    const win=openViaPdfJsViewer(f);
+    setTimeout(()=>{
+      try{if(!win||win.closed)openViaGoogleViewer(f);}
+      catch(_){openViaGoogleViewer(f);}
+    },900);
     return false;
   }
-
-  function closeViewer() {
-    const wrap = document.getElementById('pdfWrap');
-    const obj  = document.getElementById('pdfObj');
-    obj.data = '';
-    wrap.hidden = true;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  // "보도자료로 이동" 앵커 스무스 스크롤 보정
-  document.querySelectorAll('a[href="#press"]').forEach(a=>{
-    a.addEventListener('click', e=>{
-      e.preventDefault();
-      const el = document.getElementById('press');
-      if (el) el.scrollIntoView({ behavior:'smooth', block:'start' });
-    });
-  });
+  const wrap=document.getElementById('pdfWrap');
+  const obj=document.getElementById('pdfObj');
+  const fb=document.getElementById('pdfFallback');
+  obj.data=f; wrap.hidden=false; if(fb)fb.href=f;
+  setTimeout(()=>{
+    const ok=obj.getBoundingClientRect().height>50;
+    if(!ok) window.open(f,'_blank','noopener');
+  },1000);
+  return false;
+}
+function closeViewer(){
+  const wrap=document.getElementById('pdfWrap');
+  const obj=document.getElementById('pdfObj');
+  obj.data=''; wrap.hidden=true;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
 </script>
 </body>
 </html>
