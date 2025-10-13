@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>신통신통회 종교혁명 시리즈 안내</title>
-
   <style>
     :root{
       --bg:#0a0a0a; --panel:#111827; --text:#f9fafb;
@@ -21,7 +20,7 @@
     th,td{padding:8px 6px;border-bottom:1px solid var(--border);text-align:left}
     th{color:var(--accent)}
     a{color:var(--accent);text-decoration:none}
-    a.btn{display:inline-block;background:var(--btn);border:1px solid var(--btn);color:#fff;
+    .btn{display:inline-block;background:var(--btn);border:1px solid var(--btn);color:#fff;
       padding:8px 12px;border-radius:10px;font-weight:700}
     .badge{font-weight:700;color:var(--accent);margin:4px 0}
     footer{color:var(--muted);font-size:12px;text-align:right;margin-top:20px}
@@ -29,8 +28,7 @@
     #press,#endorsements{scroll-margin-top:12px}
 
     /* 전면 오버레이 PDF 뷰어 */
-    .pdf-overlay{position:fixed;inset:0;background:rgba(9,12,20,.96);z-index:9999;
-      display:none;padding-top:56px}
+    .pdf-overlay{position:fixed;inset:0;background:rgba(9,12,20,.96);z-index:9999;display:none;padding-top:56px}
     .pdf-overlay[hidden]{display:none}
     .pdf-overlay:not([hidden]){display:block}
     #pdfObj{width:100%;height:calc(100vh - 80px);border:none;background:#111}
@@ -127,65 +125,81 @@
 </div>
 
 <script>
-  function isInAppBrowser(){
+  /* ------------ 환경 판별 유틸 ------------- */
+  function isInAppBrowser() {
     const ua = navigator.userAgent || '';
+    // 카카오/페북/인스타/네이버 인앱
     return /(KAKAOTALK|FBAN|FBAV|Instagram|NAVER)/i.test(ua);
   }
+  function isMobile() {
+    const ua = navigator.userAgent || '';
+    // iPadOS13+는 Mac처럼 표기 → 터치포인트로 보정
+    const iPadOS = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+    return /Android|iPhone|iPad|iPod/i.test(ua) || iPadOS;
+  }
+  function absoluteUrl(path) { return new URL(path, location.href).href; }
 
-  // 보도자료 "바로 보기" – 전면 오버레이
+  /* ------------ 외부 웹뷰어(모바일용) ------------- */
+  function openViaPdfJsViewer(filename) {
+    const url = absoluteUrl(filename);
+    const viewer = 'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + encodeURIComponent(url);
+    return window.open(viewer, '_blank', 'noopener');
+  }
+  function openViaGoogleViewer(filename) {
+    const url = absoluteUrl(filename);
+    const viewer = 'https://docs.google.com/gview?embedded=1&url=' + encodeURIComponent(url);
+    return window.open(viewer, '_blank', 'noopener');
+  }
+
+  /* ------------ 메인 열기 함수 ------------- */
   function openPDF(filename, e) {
-  if (e) e.preventDefault();
+    if (e) e.preventDefault();
 
-  // 📱 모바일/인앱: PDF.js → 실패 시 Google Viewer로 폴백
-  if (isMobile() || isInAppBrowser()) {
-    const url   = absoluteUrl(filename);
-    const pdfjs = 'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + encodeURIComponent(url);
-    const win   = window.open(pdfjs, '_blank', 'noopener');
-
-    // 1.2초 내 탭 차단/오류 발생 시 Google Viewer로 폴백
-    setTimeout(() => {
-      try {
-        if (!win || win.closed) {
+    // 📱 모바일·인앱: PDF.js → 실패 시 Google Viewer 폴백
+    if (isMobile() || isInAppBrowser()) {
+      const win = openViaPdfJsViewer(filename);
+      setTimeout(() => {
+        try {
+          if (!win || win.closed) openViaGoogleViewer(filename);
+        } catch (_) {
           openViaGoogleViewer(filename);
         }
-      } catch (e) {
-        openViaGoogleViewer(filename);
-      }
-    }, 1200);
+      }, 900);
+      return false;
+    }
+
+    // 💻 PC: 전면 오버레이 임베드
+    const wrap = document.getElementById('pdfWrap');
+    const obj  = document.getElementById('pdfObj');
+    const fb   = document.getElementById('pdfFallback');
+
+    obj.data = filename;
+    wrap.hidden = false;
+    if (fb) fb.href = filename;
+
+    // 임베드 실패 대비(일부 데스크톱 환경)
+    setTimeout(() => {
+      const ok = obj.getBoundingClientRect().height > 50;
+      if (!ok) window.open(filename, '_blank', 'noopener');
+    }, 1000);
 
     return false;
   }
 
-  // 💻 PC용 기본 임베드
-  const wrap = document.getElementById('pdfWrap');
-  const obj  = document.getElementById('pdfObj');
-  const fb   = document.getElementById('pdfFallback');
+  function closeViewer() {
+    const wrap = document.getElementById('pdfWrap');
+    const obj  = document.getElementById('pdfObj');
+    obj.data = '';
+    wrap.hidden = true;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
-  obj.data = filename;
-  wrap.hidden = false;
-  if (fb) fb.href = filename;
-
-  // 임베드 실패 대비
-  setTimeout(() => {
-    const likelyRendered = obj.getBoundingClientRect().height > 50;
-    if (!likelyRendered) window.open(filename, '_blank', 'noopener');
-  }, 1000);
-
-  return false;
-}
-  
-  function openViaGoogleViewer(filename){
-  const url = absoluteUrl(filename);
-  const viewer = 'https://docs.google.com/gview?embedded=1&url=' + encodeURIComponent(url);
-  window.open(viewer, '_blank', 'noopener');
-}
-
-  // "보도자료로 이동" 앵커 스무스 스크롤 보장
+  // "보도자료로 이동" 앵커 스무스 스크롤 보정
   document.querySelectorAll('a[href="#press"]').forEach(a=>{
     a.addEventListener('click', e=>{
       e.preventDefault();
       const el = document.getElementById('press');
-      if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+      if (el) el.scrollIntoView({ behavior:'smooth', block:'start' });
     });
   });
 </script>
