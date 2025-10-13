@@ -1,7 +1,24 @@
 <!doctype html>
+<html lang="en">
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=/NCG_Series_Guide/NCG_Series_Guide_EN/">
 <title>Redirecting…</title>
-<p>Redirecting to the English Guide… 
-  <a href="/NCG_Series_Guide/NCG_Series_Guide_EN/">Click here if you are not redirected.</a>
+
+<!-- 1) 메타 즉시 리다이렉트 -->
+<meta http-equiv="refresh" content="0; url=/NCG_Series_Guide/NCG_Series_Guide_EN/">
+
+<!-- 2) 자바스크립트 폴백 (일부 브라우저/인앱 대비) -->
+<script>
+  (function () {
+    var target = "/NCG_Series_Guide/NCG_Series_Guide_EN/";
+    // 캐시 무시용 쿼리스트링(배포 직후 강제 갱신)
+    var ts = Date.now();
+    if (!/[\?&]v=/.test(target)) target += (target.indexOf("?")>-1 ? "&" : "?") + "v=" + ts;
+    // replace: 뒤로가기 시 원래 페이지로 돌아오지 않게
+    window.location.replace(target);
+  })();
+</script>
+
+<p>Redirecting to English guide…
+  <a href="/NCG_Series_Guide/NCG_Series_Guide_EN/">Click here</a>
 </p>
+</html>
