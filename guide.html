@@ -1,17 +1,182 @@
-<!DOCTYPE html>
+<!doctype html> 
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <title>Not Found → 이동 중…</title>
-  <link rel="canonical" href="./" />
-  <meta http-equiv="refresh" content="0; url=./" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <title>신통신통회 종교혁명 시리즈 안내</title>
   <style>
-    body{margin:0;display:grid;place-items:center;height:100vh;background:#0b0f1a;color:#dbe6ff;font-family:system-ui,Segoe UI,Roboto,Apple SD Gothic Neo,Malgun Gothic,sans-serif}
-    a{color:#7cc4ff}
+    :root {
+      --bg:#0a0a0a; --panel:#111827; --text:#f9fafb;
+      --muted:#9ca3af; --accent:#38bdf8; --btn:#2563eb; --border:#1e293b;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Malgun Gothic,sans-serif;
+      line-height:1.6}
+    .wrap{max-width:980px;margin:0 auto;padding:24px}
+    h1,h2{color:var(--accent);margin:0 0 12px}
+    .lead{color:var(--muted)}
+    section.card{background:var(--panel);border-radius:12px;padding:20px;margin-top:20px;box-shadow:0 2px 6px rgba(0,0,0,.4)}
+    table{width:100%;border-collapse:collapse;font-size:15px}
+    th,td{padding:8px 6px;border-bottom:1px solid var(--border);text-align:left}
+    th{color:var(--accent)}
+    a{color:var(--accent);text-decoration:none}
+    .btn{display:inline-block;background:var(--btn);border:1px solid var(--btn);color:#fff;
+      padding:8px 12px;border-radius:10px;font-weight:700}
+    .badge{font-weight:700;color:var(--accent);margin:4px 0}
+    footer{color:var(--muted);font-size:12px;text-align:right;margin-top:20px}
+    html{scroll-behavior:smooth}
+    #press,#endorsements{scroll-margin-top:12px}
+
+    /* PDF 오버레이 */
+    .pdf-overlay{position:fixed;inset:0;background:rgba(9,12,20,.96);z-index:9999;display:none;padding-top:56px}
+    .pdf-overlay[hidden]{display:none}
+    .pdf-overlay:not([hidden]){display:block}
+    #pdfObj{width:100%;height:calc(100vh - 80px);border:none;background:#111}
+    #backBtn{position:fixed;top:12px;right:12px;z-index:10000}
+    .pdf-fallback{position:absolute;left:12px;bottom:12px;color:#cbd5e1;margin:0}
+    /* 모바일 전용 숨김 */
+    .mobile-hide{display:inline-block}
+    @media (max-width:768px){
+      .mobile-hide{display:none!important}
+    }
+   badge{display:inline-block; padding:6px 10px; border-radius:8px; background:#0b2042; color:#cfe2ff; font-weight:600}
+   @media (max-width:560px){ .badge{padding:5px 8px} } 
   </style>
 </head>
+
 <body>
-  <p>페이지를 찾을 수 없습니다. 곧 가이드로 이동합니다… <a href="./">바로 열기</a></p>
+<div class="wrap">
+  <header>
+    <h1> 📑 신통신통회 종교혁명 시리즈 안내&nbsp;<span class="badge">(제1~7차)</span></h1>
+    <p class="lead">BY Kim · New Consilience Group (NCG)</p>
+  </header>
+
+  <section class="card" id="press">
+    <h2>📑 보도자료</h2>
+    <p class="lead">모바일에서는 “직접 열기” 버튼이 숨겨지고 “바로 보기”만 가능합니다.</p>
+    <ul style="margin-left:18px">
+      <li>
+        <a href="#" onclick="openPDF('soul-and-zero_ko.pdf', event)">영과영 – 바로 보기</a>
+        <span class="mobile-hide">· <a href="./soul-and-zero_ko.pdf" target="_blank" rel="noopener">직접 열기</a></span>
+      </li>
+      <li>
+        <a href="#" onclick="openPDF('oneness-god_ko.pdf', event)">하나님과의 대화 – 바로 보기</a>
+        <span class="mobile-hide">· <a href="./oneness-god_ko.pdf" target="_blank" rel="noopener">직접 열기</a></span>
+      </li>
+      <li>
+        <a href="#" onclick="openPDF('nosome_ko.pdf', event)">무유(無有) – 바로 보기</a>
+        <span class="mobile-hide">· <a href="./nosome_ko.pdf" target="_blank" rel="noopener">직접 열기</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="endorsements" class="card">
+    <h2>🖋 추천사</h2>
+    <article>
+      <div class="badge">영과영</div>
+      <blockquote>
+        “영과 영은 제목부터 심상치 않다. 방대한 종교 주제를 다루며 비판적 시각을 제시한다.”
+      </blockquote>
+      <a class="btn" href="#" onclick="openPDF('soul-and-zero-review_ko.pdf', event)">📄 영과영 추천사 전문(PDF)</a>
+    </article>
+
+    <article>
+      <div class="badge">하나님과의 대화</div>
+      <blockquote>
+        “저자는 마르크스가 『자본론』을 쓴 노력을 능가할 열정으로 성서를 분석했다.”
+      </blockquote>
+      <a class="btn" href="#" onclick="openPDF('oneness-god-review_ko.pdf', event)">📄 하나님과의 대화 추천사 전문(PDF)</a>
+    </article>
+  </section>
+
+  <!-- 차수 안내 -->
+<section class="card" id="batches">
+  <h2>🗂️ 차수 안내 (제1~7차)</h2>
+  <p class="lead">광고/공유용으로 묶은 7개 차수입니다.</p>
+  <ul style="margin-left:18px">
+    <li><span class="title">제1차 — 저자 서적 &amp; NCG 소개 (Ep.01 + PDF 00/01)</span>
+      — <a href="https://youtu.be/o9kSstxgDaw" target="_blank" rel="noopener">Ep.01</a></li>
+    <li><span class="title">제2차 — 왜 종교혁명이 필요한가 (Ep.02–04)</span>
+      — <a href="https://youtu.be/gylO_88pDuc" target="_blank" rel="noopener">Ep.02</a> ·
+        <a href="https://youtu.be/udOK740VFU8" target="_blank" rel="noopener">Ep.03</a> ·
+        <a href="https://youtu.be/JK5RTxrVzPw" target="_blank" rel="noopener">Ep.04</a></li>
+    <li><span class="title">제3차 — 기독교 세계에 보낸 편지 &amp; 선언 (Ep.05, 06, 11)</span>
+      — <a href="https://youtu.be/KtU5ww--3kg" target="_blank" rel="noopener">Ep.05</a> ·
+        <a href="https://youtu.be/l-Cw7woND8I" target="_blank" rel="noopener">Ep.06</a> ·
+        <a href="https://youtu.be/xWXteiQq25E" target="_blank" rel="noopener">Ep.11</a></li>
+    <li><span class="title">제4차 — 사후세계 재정의 (Ep.07, 09, 14)</span>
+      — <a href="https://youtu.be/1PmZOU5kS48" target="_blank" rel="noopener">Ep.07</a> ·
+        <a href="https://youtu.be/8xgmPHNJ1g8" target="_blank" rel="noopener">Ep.09</a> ·
+        <a href="https://youtu.be/GBHfoJ5WEO4" target="_blank" rel="noopener">Ep.14</a></li>
+    <li><span class="title">제5차 — 노솜, ENZ &amp; 신성 (Ep.08, 10)</span>
+      — <a href="https://youtu.be/Dw-fekBj8Z8" target="_blank" rel="noopener">Ep.08</a> ·
+        <a href="https://youtu.be/vxlGrY75sXQ" target="_blank" rel="noopener">Ep.10</a></li>
+    <li><span class="title">제6차 — 야훼 vs. 예수의 하나님 / 십일조 (Ep.12–13)</span>
+      — <a href="https://youtu.be/iUudpAtrj9o" target="_blank" rel="noopener">Ep.12</a> ·
+        <a href="https://youtu.be/XKuveyzkE3Q" target="_blank" rel="noopener">Ep.13</a></li>
+    <li><span class="title">제7차 — 출애굽 &amp; 다윗·솔로몬 신화 비판 (Ep.15–16)</span>
+      — <a href="https://youtu.be/ut7s66h2FZs" target="_blank" rel="noopener">Ep.15</a> ·
+        <a href="https://youtu.be/hPeLXPMlhA4" target="_blank" rel="noopener">Ep.16</a></li>
+  </ul>
+</section>
+  <footer>© BY Kim · New Consilience Group (NCG)</footer>
+
+  <div id="pdfWrap" class="pdf-overlay" hidden>
+    <object id="pdfObj" data="" type="application/pdf"></object>
+    <button class="btn" id="backBtn" onclick="closeViewer()">메인으로 돌아가기</button>
+    <p class="pdf-fallback">
+      브라우저가 PDF 임베드를 지원하지 않습니다.
+      <a id="pdfFallback" href="#" target="_blank" rel="noopener">새 창에서 열기</a>
+    </p>
+  </div>
+</div>
+
+<script>
+function isMobile(){
+  const ua = navigator.userAgent || '';
+  const iPadOS = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+  return /Android|iPhone|iPad|iPod/i.test(ua) || iPadOS;
+}
+function isInAppBrowser(){
+  const ua = navigator.userAgent || '';
+  return /(KAKAOTALK|FBAN|FBAV|Instagram|NAVER)/i.test(ua);
+}
+function absoluteUrl(p){return new URL(p,location.href).href;}
+function openViaPdfJsViewer(f){
+  const u=absoluteUrl(f);
+  return window.open('https://mozilla.github.io/pdf.js/web/viewer.html?file='+encodeURIComponent(u),'_blank','noopener');
+}
+function openViaGoogleViewer(f){
+  const u=absoluteUrl(f);
+  return window.open('https://docs.google.com/gview?embedded=1&url='+encodeURIComponent(u),'_blank','noopener');
+}
+
+function openPDF(f,e){
+  if(e) e.preventDefault();
+  if(isMobile()||isInAppBrowser()){
+    const win=openViaPdfJsViewer(f);
+    setTimeout(()=>{
+      try{if(!win||win.closed)openViaGoogleViewer(f);}
+      catch(_){openViaGoogleViewer(f);}
+    },900);
+    return false;
+  }
+  const wrap=document.getElementById('pdfWrap');
+  const obj=document.getElementById('pdfObj');
+  const fb=document.getElementById('pdfFallback');
+  obj.data=f; wrap.hidden=false; if(fb)fb.href=f;
+  setTimeout(()=>{
+    const ok=obj.getBoundingClientRect().height>50;
+    if(!ok) window.open(f,'_blank','noopener');
+  },1000);
+  return false;
+}
+function closeViewer(){
+  const wrap=document.getElementById('pdfWrap');
+  const obj=document.getElementById('pdfObj');
+  obj.data=''; wrap.hidden=true;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
 </body>
 </html>
