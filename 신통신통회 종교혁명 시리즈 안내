@@ -95,7 +95,7 @@
     <button class="btn" id="backBtn" onclick="closeViewer()">메인으로 돌아가기</button>
     <p class="pdf-fallback">
       브라우저가 PDF 임베드를 지원하지 않습니다.
-      <a id="pdfFallback" href="#" target="_blank" rel="noopener">새 창에서 열기</a>
+      <a id="pdfFallback" href="#" target="_blank" rel="noopener">새 창에서 열기</a> 
     </p>
   </div>
 </div>
