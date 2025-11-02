@@ -3,63 +3,97 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>신통신통회 종교혁명 시리즈 — 광고 / 배포 세트 (1–7)</title>
+
+  <title>신통신통회 종교혁명 시리즈 — 광고 세트 (제1회~16회)</title>
+
+  <!-- Open Graph / Kakao / Facebook 미리보기 -->
+  <meta property="og:url" content="https://bykim5710.github.io/NCG_Series_Guide/NCG_Series_Guide_KO_Ads.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="신통신통회 종교혁명 시리즈 — 광고 세트 (제1~16회)" />
+  <meta property="og:description" content="저자·신통신통회 소개, 무유와 전이, 사후세계 재해석, 야훼 vs 예수의 하나님, 십일조 비판, 출애굽과 다윗-솔로몬 신화 해체까지. 7개 세트로 묶은 핵심 영상 안내." />
+  <meta property="og:image" content="https://bykim5710.github.io/NCG_Series_Guide/og-default.jpg" />
+  <meta property="og:image:type" content="image/jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="신통신통회 / NCG Series" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="신통신통회 종교혁명 시리즈 — 광고 세트" />
+  <meta name="twitter:description" content="1~16회 핵심 주제를 7개 세트로 정리한 광고·홍보용 안내 페이지" />
+  <meta name="twitter:image" content="https://bykim5710.github.io/NCG_Series_Guide/og-default.jpg" />
+  <meta name="twitter:url" content="https://bykim5710.github.io/NCG_Series_Guide/NCG_Series_Guide_KO_Ads.html" />
 
   <style>
     :root {
       --bg:#0d1117;
-      --panel:#111827;
+      --panel:#0f172a;
       --border:#1e293b;
       --text:#e6edf3;
-      --muted:#9aa3b2;
+      --muted:#a3b3c4;
       --accent:#3b82f6;
     }
+
+    * { box-sizing:border-box; }
     body {
-      margin:0; padding:40px 20px; background:var(--bg);
-      color:var(--text); font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.6;
+      margin:0;
+      padding:24px;
+      background:var(--bg);
+      color:var(--text);
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.5;
+      font-size:16px;
     }
+
+    header.hero {
+      background:linear-gradient(
+        to bottom right,
+        rgba(59,130,246,0.9),
+        rgba(59,130,246,0.5)
+      );
+      border-radius:12px;
+      padding:20px 24px;
+      border:1px solid rgba(255,255,255,0.15);
+      max-width:900px;
+      margin:0 auto 24px auto;
+      box-shadow:0 12px 24px rgba(0,0,0,0.6);
+      text-align:center;
+    }
+    header.hero h1 {
+      margin:0 0 8px 0;
+      font-size:1.25rem;
+      font-weight:600;
+      color:#fff;
+      line-height:1.4;
+    }
+    header.hero p {
+      margin:0;
+      font-size:0.95rem;
+      color:#e9eeff;
+      line-height:1.4;
+    }
+
     main.wrap {
-      max-width:900px; margin:0 auto;
+      max-width:900px;
+      margin:0 auto;
     }
-    h1 {
-      text-align:center; color:#fff; margin-bottom:6px;
-    }
-    p.subtitle {
-      text-align:center; color:var(--muted); margin-bottom:36px;
-    }
-    h2 {
-      margin-top:36px; margin-bottom:6px; color:#fff;
-      font-size:1.15rem; border-left:4px solid var(--accent);
-      padding-left:10px;
-    }
-    p.lead {
-      color:var(--muted); font-size:0.95rem; margin:4px 0 14px 0;
-    }
-    ul.items { list-style:none; padding:0; margin:0 0 12px 0; }
-    li.item {
+
+    section.set {
       background:var(--panel);
       border:1px solid var(--border);
-      border-radius:8px;
-      padding:10px 14px;
-      margin-bottom:6px;
-      display:flex; justify-content:space-between; align-items:center;
-      flex-wrap:wrap; gap:6px;
+      border-radius:12px;
+      padding:20px 24px;
+      margin-bottom:20px;
     }
-    .btn {
-      background:var(--accent); color:#fff;
-      border:none; border-radius:6px;
-      padding:6px 12px;
-      text-decoration:none;
-      font-size:0.9rem; font-weight:600;
-    }
-    .btn.secondary {
-      background:#1e293b;
+
+    section.set h2 {
+      margin:0 0 8px 0;
+      font-size:1rem;
+      font-weight:600;
       color:var(--text);
-      border:1px solid var(--border);
+      line-height:1.4;
     }
-    .btn:hover { opacity:0.9; }
-    .pdfs { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+
     .chip {
       background:var(--accent);
       color:#fff;
@@ -68,102 +102,224 @@
       border-radius:4px;
       margin-left:6px;
     }
+
+    p.lead {
+      margin:0 0 12px 0;
+      font-size:0.9rem;
+      color:var(--muted);
+      line-height:1.4;
+    }
+
+    ul.items {
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+    li.item {
+      background:rgba(30,41,59,0.6);
+      border:1px solid var(--border);
+      border-radius:8px;
+      padding:12px 16px;
+      margin-bottom:8px;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      font-size:0.9rem;
+      line-height:1.4;
+    }
+    .title {
+      color:var(--text);
+      font-weight:500;
+    }
+    a.btn {
+      display:inline-block;
+      background:#1e293b;
+      color:#fff;
+      font-weight:600;
+      text-decoration:none;
+      border:1px solid #334155;
+      border-radius:6px;
+      padding:8px 12px;
+      font-size:0.85rem;
+    }
+    a.btn:hover {
+      background:#111827;
+      border-color:#475569;
+    }
+
+    .nav-links {
+      text-align:center;
+      margin:30px 0;
+    }
+    .nav-links a.btn {
+      margin:6px;
+      padding:8px 14px;
+      font-size:0.95rem;
+    }
+
     footer {
       text-align:center;
       color:var(--muted);
       font-size:0.8rem;
       margin:40px 0 10px 0;
     }
+
+    @media(max-width:480px){
+      body { padding:16px; font-size:15px; }
+      header.hero { padding:16px; }
+      header.hero h1 { font-size:1.15rem; }
+    }
   </style>
 </head>
 
 <body>
+  <header class="hero">
+    <h1>신통신통회 종교혁명 시리즈 — 광고 세트 안내</h1>
+    <p>제1회~16회 핵심 주제를 7개 세트로 묶어 소개하는 홍보·광고용 버전입니다.</p>
+  </header>
+
   <main class="wrap">
-    <h1>신통신통회 종교혁명 시리즈 — 광고 / 배포 세트 (1–7)</h1>
-    <p class="subtitle">YouTube · Facebook · 홍보자료용 시리즈 세트 구성표</p>
 
-    <!-- Set 1 -->
+    <!-- 세트 1 -->
     <section class="set" id="set1">
-      <h2>세트 1 — 저자 및 신통신통회(NCG) 소개 <span class="chip">제1회</span></h2>
-      <p class="lead">저자의 3부작과 신통신통회의 비전을 소개합니다. 「하나님과의 대화」(00·01회 PDF) 및 「영과 영」, 「무유」의 추천사와 개요가 포함됩니다.</p>
-
+      <h2>세트 1 — 저자와 신통신통회 소개 <span class="chip">제1회</span></h2>
+      <p class="lead">
+        저자 김병윤 회장과 신통신통회(NCG)의 비전 소개. “저자 프로필 / 종교혁명 3부작 안내” PDF 포함.
+      </p>
       <ul class="items">
         <li class="item">
-          <span class="title">제1회 — 김병윤 회장 및 신통신통회 소개</span>
+          <span class="title">제1회 — 김병윤 회장과 신통신통회 소개</span>
           <a class="btn" href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">▶ YouTube</a>
         </li>
       </ul>
 
-      <div class="pdfs">
-        <a class="btn secondary" href="./religious-revolution-trilogy_ko.pdf" target="_blank" rel="noopener">📄 저자 3부작 및 프로필</a>
+      <div class="items">
+        <div class="item" style="justify-content:flex-start;">
+          <span class="title">📄 저자·3부작·프로필 (PDF)</span>
+          <a class="btn" href="./NCG_Series_Guide_KR.docx" target="_blank" rel="noopener">열기</a>
+          <!-- 또는 한글 PDF로 교체 가능 -->
+        </div>
       </div>
     </section>
 
-    <!-- Set 2 -->
+    <!-- 세트 2 -->
     <section class="set" id="set2">
-      <h2>세트 2 — 종교혁명의 필요성 <span class="chip">제2–4회</span></h2>
-      <p class="lead">종교개혁을 넘어 진리와 사랑의 본질로 돌아가야 함을 다룹니다.</p>
+      <h2>세트 2 — 왜 종교혁명인가 <span class="chip">제2~4회</span></h2>
+      <p class="lead">종교개혁을 넘어, 진리와 사랑의 근본으로 돌아가야 하는 이유.</p>
       <ul class="items">
-        <li class="item"><span class="title">제2회 — 종교혁명의 필요성 – 기독교민주주의</span><a class="btn" href="https://youtu.be/IniMUGC3T9Q" target="_blank" rel="noopener">▶ YouTube</a></li>
-        <li class="item"><span class="title">제3회 — 종교개혁을 뛰어넘어</span><a class="btn" href="https://youtu.be/lWkN4CYJzeY" target="_blank" rel="noopener">▶ YouTube</a></li>
-        <li class="item"><span class="title">제4회 — 진리의 근원으로 돌아가다</span><a class="btn" href="https://youtu.be/2o4DQlfseJE" target="_blank" rel="noopener">▶ YouTube</a></li>
+        <li class="item">
+          <span class="title">제2회 — 종교혁명의 필요성 / 기독교민주주의</span>
+          <a class="btn" href="https://youtu.be/IniMUGC3T9Q" target="_blank" rel="noopener">▶ YouTube</a>
+        </li>
+        <li class="item">
+          <span class="title">제3회 — 종교개혁을 뛰어넘는 종교혁명</span>
+          <a class="btn" href="https://youtu.be/lWkN4CYJzeY" target="_blank" rel="noopener">▶ YouTube</a>
+        </li>
+        <li class="item">
+          <span class="title">제4회 — 왜 종교혁명인가 / 근본으로 돌아가다</span>
+          <a class="btn" href="https://youtu.be/2o4DQlfseJE" target="_blank" rel="noopener">▶ YouTube</a>
+        </li>
       </ul>
     </section>
 
-    <!-- Set 3 -->
+    <!-- 세트 3 -->
     <section class="set" id="set3">
-      <h2>세트 3 — 기독교에 보내는 서신과 선언서 <span class="chip">제5, 6, 11회</span></h2>
-      <p class="lead">기독교계에 보내는 서신, 종교혁명 선언서, 그리고 「10가지 반박문」 예고편을 포함합니다.</p>
+      <h2>세트 3 — 기독교 세계에 보낸 서신 / 종교혁명 선언 <span class="chip">제5·6·11회</span></h2>
+      <p class="lead">기독교계에 보낸 공개서한, 종교혁명 선언, 그리고 로마 교황청·기독교에 대한 열 가지 반박의 예고.</p>
       <ul class="items">
-        <li class="item"><span class="title">제5회 — 기독교 세계에 보내는 서신</span><a class="btn" href="https://youtu.be/CChiJ5zqBUE" target="_blank" rel="noopener">▶ YouTube</a></li>
-        <li class="item"><span class="title">제6회 — 종교혁명 선언서</span><a class="btn" href="https://youtu.be/dUE4oor84dI" target="_blank" rel="noopener">▶ YouTube</a></li>
-        <li class="item"><span class="title">제11회 — 로마 교황청과 기독교에 대한 반박문</span><a class="btn" href="https://youtu.be/ROc29mrzC8w" target="_blank" rel="noopener">▶ YouTube</a></li>
+        <li class="item">
+          <span class="title">제5회 — 기독교 세계에 보낸 서신</span>
+          <a class="btn" href="https://youtu.be/CChiJ5zqBUE" target="_blank" rel="noopener">▶ YouTube</a>
+        </li>
+        <li class="item">
+          <span class="title">제6회 — 종교혁명 선언서</span>
+          <a class="btn" href="https://youtu.be/dUE4oor84dI" target="_blank" rel="noopener">▶ YouTube</a>
+        </li>
+        <li class="item">
+          <span class="title">제11회 — 로마 교황청과 기독교에 대한 반박</span>
+          <a class="btn" href="https://youtu.be/ROc29mrzC8w" target="_blank" rel="noopener">▶ YouTube</a>
+        </li>
       </ul>
     </section>
 
-    <!-- Set 4 -->
+    <!-- 세트 4 -->
     <section class="set" id="set4">
-      <h2>세트 4 — 사후세계의 재정의 <span class="chip">제7, 9, 14회</span></h2>
-      <p class="lead">신화적 사후세계에서 과학적 전이계로 — 사후세계의 개념을 새롭게 해석합니다.</p>
+      <h2>세트 4 — 사후세계란 무엇인가 / 재정의 <span class="chip">제7·9·14회</span></h2>
+      <p class="lead">신화적 사후세계가 아니라, 과학적·철학적 전이(轉移) 구조로 다시 설명하는 사후세계.</p>
       <ul class="items">
-        <li class="item"><span class="title">제7회 — 무유와 전이</span><a class="btn" href="https://youtu.be/RJLy0bdgQoQ" target="_blank" rel="noopener">▶ YouTube</a></li>
-        <li class="item"><span class="title">제9회 — 사후세계 – 존재의 전이를 넘어</span><a class="btn" href="https://youtu.be/v9fF42xvwWE" target="_blank" rel="noopener">▶ YouTube</a></li>
-        <li class="item"><span class="title">제14회 — 사후세계의 본질</span><a class="btn" href="https://youtu.be/X9QygC6bXqE" target="_blank" rel="noopener">▶ YouTube</a></li>
+        <li class="item">
+          <span class="title">제7회 — 무유와 전이</span>
+          <a class="btn" href="https://youtu.be/RJLy0bdgQoQ" target="_blank" rel="noopener">▶ YouTube</a>
+        </li>
+        <li class="item">
+          <span class="title">제9회 — 사후세계 vs 전이계</span>
+          <a class="btn" href="https://youtu.be/v9fF42xvwWE" target="_blank" rel="noopener">▶ YouTube</a>
+        </li>
+        <li class="item">
+          <span class="title">제14회 — 사후세계</span>
+          <a class="btn" href="https://youtu.be/X9QygC6bXqE" target="_blank" rel="noopener">▶ YouTube</a>
+        </li>
       </ul>
     </section>
 
-    <!-- Set 5 -->
+    <!-- 세트 5 -->
     <section class="set" id="set5">
-      <h2>세트 5 — 무유, 공·무·영, 그리고 신성 <span class="chip">제8, 10회</span></h2>
-      <p class="lead">쿼크 구조를 통해 본 무유의 3요소(공·무·영)와 불성·신성·천성의 본질을 탐구합니다.</p>
+      <h2>세트 5 — 무유, 공·무·영, 그리고 신성 <span class="chip">제8·10회</span></h2>
+      <p class="lead">ENZ 구조를 통해 본 무유와 쿼크(공·무·영), 불성·신성·천성의 본질을 탐구합니다.</p>
       <ul class="items">
-        <li class="item"><span class="title">제8회 — ENZ: 무유와 쿼크</span><a class="btn" href="https://youtu.be/NmZ9FxixN48" target="_blank" rel="noopener">▶ YouTube</a></li>
-        <li class="item"><span class="title">제10회 — 일체(One-ness)</span><a class="btn" href="https://youtu.be/uTzE24vYqco" target="_blank" rel="noopener">▶ YouTube</a></li>
+        <li class="item">
+          <span class="title">제8회 — ENZ: 무유와 쿼크</span>
+          <a class="btn" href="https://youtu.be/NmZ9FxixN48" target="_blank" rel="noopener">▶ YouTube</a>
+        </li>
+        <li class="item">
+          <span class="title">제10회 — 일체(One-ness)</span>
+          <a class="btn" href="https://youtu.be/uTzE24vYqco" target="_blank" rel="noopener">▶ YouTube</a>
+        </li>
       </ul>
     </section>
 
-    <!-- Set 6 -->
+    <!-- 세트 6 -->
     <section class="set" id="set6">
-      <h2>세트 6 — 여호와와 십일조 교리 <span class="chip">제12–13회</span></h2>
-      <p class="lead">예수의 신성과 여호와의 신학적 차이, 그리고 십일조 교리에 대한 역사적·비판적 고찰.</p>
+      <h2>세트 6 — 야훼와 십일조 교리 <span class="chip">제12~13회</span></h2>
+      <p class="lead">야훼와 예수의 신성(하나임), 그리고 십일조 교리에 대한 역사적·비판적 고찰.</p>
       <ul class="items">
-        <li class="item"><span class="title">제12회 — 여호와와 예수의 신(성)</span><a class="btn" href="https://youtu.be/4zlMaEBqaNU" target="_blank" rel="noopener">▶ YouTube</a></li>
-        <li class="item"><span class="title">제13회 — 십일조 교리의 비판</span><a class="btn" href="https://youtu.be/gMURqKiDlEk" target="_blank" rel="noopener">▶ YouTube</a></li>
+        <li class="item">
+          <span class="title">제12회 — 야훼와 예수의 신(성)</span>
+          <a class="btn" href="https://youtu.be/4z1MaEBgaNU" target="_blank" rel="noopener">▶ YouTube</a>
+        </li>
+        <li class="item">
+          <span class="title">제13회 — 십일조 교리의 비판</span>
+          <a class="btn" href="https://youtu.be/gMURqKiDlEk" target="_blank" rel="noopener">▶ YouTube</a>
+        </li>
       </ul>
     </section>
 
-    <!-- Set 7 -->
+    <!-- 세트 7 -->
     <section class="set" id="set7">
-      <h2>세트 7 — 출애굽과 다윗·솔로몬 신화의 해체 <span class="chip">제15–16회</span></h2>
-      <p class="lead">출애굽 사건은 신화이며, 다윗·솔로몬 제국은 후대의 문학적 창작임을 역사적으로 해석합니다.</p>
+      <h2>세트 7 — 출애굽과 다윗·솔로몬 신화의 해체 <span class="chip">제15~16회</span></h2>
+      <p class="lead">출애굽 사건은 신화이며, 다윗·솔로몬 제국은 후대의 문학적 정치 작업으로 해석합니다.</p>
       <ul class="items">
-        <li class="item"><span class="title">제15회 — 모세의 출애굽 신화</span><a class="btn" href="https://youtu.be/7tGGKBsqghk" target="_blank" rel="noopener">▶ YouTube</a></li>
-        <li class="item"><span class="title">제16회 — 다윗과 솔로몬 제국의 환상</span><a class="btn" href="https://youtu.be/WiTOupqxrfw" target="_blank" rel="noopener">▶ YouTube</a></li>
+        <li class="item">
+          <span class="title">제15회 — 모세의 출애굽 신화</span>
+          <a class="btn" href="https://youtu.be/7tGGKBsqghk" target="_blank" rel="noopener">▶ YouTube</a>
+        </li>
+        <li class="item">
+          <span class="title">제16회 — 다윗과 솔로몬 제국의 환상</span>
+          <a class="btn" href="https://youtu.be/WiTOUpqqxfw" target="_blank" rel="noopener">▶ YouTube</a>
+        </li>
       </ul>
     </section>
+
+    <!-- 하단 네비 버튼 -->
+    <div class="nav-links">
+      <a class="btn" href="./guide.html" target="_blank" rel="noopener">📘 시리즈 전체 안내 보기</a>
+      <a class="btn" href="./index.html" target="_blank" rel="noopener">🏠 메인 페이지로 돌아가기</a>
+    </div>
 
     <footer>
-      © <span id="year"></span> 김병윤, 신통신통회 회장 (New Consilience Group, NCG). All rights reserved.
+      © <span id="year"></span> Byung Youn Kim, Chairman of the New Consilience Group (NCG). All rights reserved.
     </footer>
   </main>
 
