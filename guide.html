@@ -190,7 +190,7 @@ function openPDF(f,e){
   if(e) e.preventDefault();
   if(isMobile()||isInAppBrowser()){
     const win=openViaPdfJsViewer(f);
-    setTimeout(()=>{
+    setTimeout(()=>{ 
       try{if(!win||win.closed)openViaGoogleViewer(f);}
       catch(_){openViaGoogleViewer(f);}
     },900);
