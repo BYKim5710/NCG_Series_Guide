@@ -9,45 +9,70 @@
       --bg:#0a0a0a; --panel:#111827; --text:#f9fafb;
       --muted:#9ca3af; --accent:#38bdf8; --btn:#2563eb; --border:#1e293b;
     }
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+    html,body{
+      margin:0;padding:0;background:var(--bg);color:var(--text);
       font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Malgun Gothic,sans-serif;
-      line-height:1.6}
+      line-height:1.6
+    }
     .wrap{max-width:980px;margin:0 auto;padding:24px}
     h1,h2{color:var(--accent);margin:0 0 12px}
     .lead{color:var(--muted)}
-    section.card{background:var(--panel);border-radius:12px;padding:20px;margin-top:20px;box-shadow:0 2px 6px rgba(0,0,0,.4)}
+    section.card{
+      background:var(--panel);border-radius:12px;padding:20px;margin-top:20px;
+      box-shadow:0 2px 6px rgba(0,0,0,.4)
+    }
     table{width:100%;border-collapse:collapse;font-size:15px}
     th,td{padding:8px 6px;border-bottom:1px solid var(--border);text-align:left}
     th{color:var(--accent)}
     a{color:var(--accent);text-decoration:none}
-    .btn{display:inline-block;background:var(--btn);border:1px solid var(--btn);color:#fff;
-      padding:8px 12px;border-radius:10px;font-weight:700}
-    .badge{font-weight:700;color:var(--accent);margin:4px 0}
+    a:hover{text-decoration:underline}
+    .btn{
+      display:inline-block;background:var(--btn);border:1px solid var(--btn);color:#fff;
+      padding:8px 12px;border-radius:10px;font-weight:700
+    }
+    .badge{
+      display:inline-block;padding:6px 10px;border-radius:8px;
+      background:#0b2042;color:#cfe2ff;font-weight:600
+    }
+    .title{
+      font-weight:700;
+      color:var(--text);
+      text-decoration:none;
+    }
+    .title:hover{
+      color:#cfe2ff;
+      text-decoration:underline;
+    }
     footer{color:var(--muted);font-size:12px;text-align:right;margin-top:20px}
     html{scroll-behavior:smooth}
     #press,#endorsements{scroll-margin-top:12px}
 
     /* PDF 오버레이 */
-    .pdf-overlay{position:fixed;inset:0;background:rgba(9,12,20,.96);z-index:9999;display:none;padding-top:56px}
+    .pdf-overlay{
+      position:fixed;inset:0;background:rgba(9,12,20,.96);
+      z-index:9999;display:none;padding-top:56px
+    }
     .pdf-overlay[hidden]{display:none}
     .pdf-overlay:not([hidden]){display:block}
     #pdfObj{width:100%;height:calc(100vh - 80px);border:none;background:#111}
     #backBtn{position:fixed;top:12px;right:12px;z-index:10000}
     .pdf-fallback{position:absolute;left:12px;bottom:12px;color:#cbd5e1;margin:0}
+
     /* 모바일 전용 숨김 */
     .mobile-hide{display:inline-block}
     @media (max-width:768px){
       .mobile-hide{display:none!important}
     }
-   badge{display:inline-block; padding:6px 10px; border-radius:8px; background:#0b2042; color:#cfe2ff; font-weight:600}
-   @media (max-width:560px){ .badge{padding:5px 8px} } 
+    @media (max-width:560px){
+      .badge{padding:5px 8px}
+    }
   </style>
 </head>
 
 <body>
 <div class="wrap">
   <header>
-    <h1> 📑 신통신통회 종교혁명 시리즈 안내&nbsp;<span class="badge">(제1~9차)</span></h1>
+    <h1>📑 신통신통회 종교혁명 시리즈 안내 <span class="badge">(제1~9차)</span></h1>
     <p class="lead">BY Kim · New Consilience Group (NCG)</p>
   </header>
 
@@ -88,76 +113,77 @@
       <a class="btn" href="#" onclick="openPDF('oneness-god-review_ko.pdf', event)">📄 하나님과의 대화 추천사 전문(PDF)</a>
     </article>
   </section>
-<!-- 차수 안내 -->
-<section class="card" id="batches">
-  <h2>🗂️ 차수 안내 (재편안: 제1~9차)</h2>
-  <p class="lead">광고/공유용으로 묶은 차수(세트)입니다.</p>
 
-  <ul style="margin-left:18px">
-    <li>
-      <span class="title">제1차 — 종교혁명의 시작 (제1, 제23)</span>
-      — <a href="https://youtu.be/o9kSstxgDaw" target="_blank" rel="noopener">제1</a>
-      — <a href="https://youtu.be/GcbFFr97d7I" target="_blank" rel="noopener">제23</a>
-    </li>
+  <!-- 차수 안내 -->
+  <section class="card" id="batches">
+    <h2>🗂️ 차수 안내 (재편안: 제1~9차)</h2>
+    <p class="lead">광고/공유용으로 묶은 차수(세트)입니다.</p>
 
-    <li>
-      <span class="title">제2차 — 왜 종교혁명이 필요한가? (제2, 제3, 제4)</span>
-      — <a href="https://youtu.be/gylO_88pDuc" target="_blank" rel="noopener">제2</a> ·
-        <a href="https://youtu.be/udOK740VFU8" target="_blank" rel="noopener">제3</a> ·
-        <a href="https://youtu.be/JK5RTxrVzPw" target="_blank" rel="noopener">제4</a>
-    </li>
-
-    <li>
-      <span class="title">제3차 —무엇이 종교혁명인가? (제5, 제11, 제6)</span>
-      — <a href="https://youtu.be/KtU5ww--3kg" target="_blank" rel="noopener">제5</a> ·
-        <a href="https://youtu.be/xWXteiQq25E" target="_blank" rel="noopener">제11</a> 
-        <a href="https://youtu.be/l-Cw7woND8I" target="_blank" rel="noopener">제6</a> ·
-     </li>
-
-    <li>
-      <span class="title">제4차 — 사후세계 재정의 (제14, 제7, 제9)</span>
-      — <a href="https://youtu.be/GBHfoJ5WEO4" target="_blank" rel="noopener">제14</a>
-        <a href="https://youtu.be/1PmZOU5kS48" target="_blank" rel="noopener">제7</a> ·
-        <a href="https://youtu.be/8xgmPHNJ1g8" target="_blank" rel="noopener">제9</a> ·
-    </li>
-
-    <li>
-      <span class="title">제5차 — 21세기 신통섭의 진리 (제8, 제7, 제9, 제10)</span>
-      — <a href="https://youtu.be/Dw-fekBj8Z8" target="_blank" rel="noopener">제8</a> ·
-        <a href="https://youtu.be/1PmZOU5kS48" target="_blank" rel="noopener">제7</a> ·
-        <a href="https://youtu.be/8xgmPHNJ1g8" target="_blank" rel="noopener">제9</a> ·
-        <a href="https://youtu.be/vxlGrY75sXQ" target="_blank" rel="noopener">제10</a>
-    </li>
-
-    <li>
-      <span class="title">제6차 — 구약성경의 사상적 문제점 (제12, 제13, 제17)</span>
-      — <a href="https://youtu.be/iUudpAtrj9o" target="_blank" rel="noopener">제12</a> ·
-        <a href="https://youtu.be/XKuveyzkE3Q" target="_blank" rel="noopener">제13</a> ·
-        <a href="https://youtu.be/OTB-KOhbuko" target="_blank" rel="noopener">제17</a>
-    </li>
-
-    <li>
-      <span class="title">제7차 — 구약성경의 역사적 문제점 (제15, 제16)</span>
-      — <a href="https://youtu.be/ut7s66h2FZs" target="_blank" rel="noopener">제15</a> ·
-        <a href="https://youtu.be/hPeLXPMlhA4" target="_blank" rel="noopener">제16</a>
-    </li>
-
-    <li>
-      <span class="title">제8차 — 예수는 누구였는가 (제.18, 제19)</span>
-      — <a href="https://youtu.be/mdhz3A7p70s" target="_blank" rel="noopener">제18</a> ·
-        <a href="https://youtu.be/m4II-xosym4" target="_blank" rel="noopener">제19</a>
+    <ul style="margin-left:18px">
+      <li>
+        <a class="title" href="https://bykim5710.github.io/series.kr/batch/batch1.html">제1차 — 종교혁명의 시작 (제1, 제23)</a>
+        — <a href="https://youtu.be/o9kSstxgDaw" target="_blank" rel="noopener">제1</a>
+        — <a href="https://youtu.be/GcbFFr97d7I" target="_blank" rel="noopener">제23</a>
       </li>
 
-    <li>
-      <span class="title">제9차 — 신약성경의 구조적 문제점 (제20, 제21, 제22)</span>
-      — <a href="https://youtu.be/Z-9HpTUZtfA" target="_blank" rel="noopener">제20</a> ·
-        <a href="https://youtu.be/R5XYDQ8jXAw" target="_blank" rel="noopener">제21</a> ·
-        <a href="https://youtu.be/VD1IffRad0k" target="_blank" rel="noopener">제22</a>
-    </li>
-  </ul>
-</section>
+      <li>
+        <a class="title" href="https://bykim5710.github.io/series.kr/batch/batch2.html">제2차 — 왜 종교혁명이 필요한가? (제2, 제3, 제4)</a>
+        — <a href="https://youtu.be/gylO_88pDuc" target="_blank" rel="noopener">제2</a> ·
+          <a href="https://youtu.be/udOK740VFU8" target="_blank" rel="noopener">제3</a> ·
+          <a href="https://youtu.be/JK5RTxrVzPw" target="_blank" rel="noopener">제4</a>
+      </li>
 
-<footer>© BY Kim · New Consilience Group (NCG)</footer>
+      <li>
+        <a class="title" href="https://bykim5710.github.io/series.kr/batch/batch3.html">제3차 — 무엇이 종교혁명인가? (제5, 제11, 제6)</a>
+        — <a href="https://youtu.be/KtU5ww--3kg" target="_blank" rel="noopener">제5</a> ·
+          <a href="https://youtu.be/xWXteiQq25E" target="_blank" rel="noopener">제11</a> ·
+          <a href="https://youtu.be/l-Cw7woND8I" target="_blank" rel="noopener">제6</a>
+      </li>
+
+      <li>
+        <a class="title" href="https://bykim5710.github.io/series.kr/batch/batch4.html">제4차 — 사후세계 재정의 (제14, 제7, 제9)</a>
+        — <a href="https://youtu.be/GBHfoJ5WEO4" target="_blank" rel="noopener">제14</a> ·
+          <a href="https://youtu.be/1PmZOU5kS48" target="_blank" rel="noopener">제7</a> ·
+          <a href="https://youtu.be/8xgmPHNJ1g8" target="_blank" rel="noopener">제9</a>
+      </li>
+
+      <li>
+        <a class="title" href="https://bykim5710.github.io/series.kr/batch/batch5.html">제5차 — 21세기 신통섭의 진리 (제8, 제7, 제9, 제10)</a>
+        — <a href="https://youtu.be/Dw-fekBj8Z8" target="_blank" rel="noopener">제8</a> ·
+          <a href="https://youtu.be/1PmZOU5kS48" target="_blank" rel="noopener">제7</a> ·
+          <a href="https://youtu.be/8xgmPHNJ1g8" target="_blank" rel="noopener">제9</a> ·
+          <a href="https://youtu.be/vxlGrY75sXQ" target="_blank" rel="noopener">제10</a>
+      </li>
+
+      <li>
+        <a class="title" href="https://bykim5710.github.io/series.kr/batch/batch6.html">제6차 — 구약성경의 사상적 문제점 (제12, 제13, 제17)</a>
+        — <a href="https://youtu.be/iUudpAtrj9o" target="_blank" rel="noopener">제12</a> ·
+          <a href="https://youtu.be/XKuveyzkE3Q" target="_blank" rel="noopener">제13</a> ·
+          <a href="https://youtu.be/OTB-KOhbuko" target="_blank" rel="noopener">제17</a>
+      </li>
+
+      <li>
+        <a class="title" href="https://bykim5710.github.io/series.kr/batch/batch7.html">제7차 — 구약성경의 역사적 문제점 (제15, 제16)</a>
+        — <a href="https://youtu.be/ut7s66h2FZs" target="_blank" rel="noopener">제15</a> ·
+          <a href="https://youtu.be/hPeLXPMlhA4" target="_blank" rel="noopener">제16</a>
+      </li>
+
+      <li>
+        <a class="title" href="https://bykim5710.github.io/series.kr/batch/batch8.html">제8차 — 예수는 누구였는가 (제18, 제19)</a>
+        — <a href="https://youtu.be/mdhz3A7p70s" target="_blank" rel="noopener">제18</a> ·
+          <a href="https://youtu.be/m4II-xosym4" target="_blank" rel="noopener">제19</a>
+      </li>
+
+      <li>
+        <a class="title" href="https://bykim5710.github.io/series.kr/batch/batch9.html">제9차 — 신약성경의 구조적 문제점 (제20, 제21, 제22)</a>
+        — <a href="https://youtu.be/Z-9HpTUZtfA" target="_blank" rel="noopener">제20</a> ·
+          <a href="https://youtu.be/R5XYDQ8jXAw" target="_blank" rel="noopener">제21</a> ·
+          <a href="https://youtu.be/VD1IffRad0k" target="_blank" rel="noopener">제22</a>
+      </li>
+    </ul>
+  </section>
+
+  <footer>© BY Kim · New Consilience Group (NCG)</footer>
 
   <div id="pdfWrap" class="pdf-overlay" hidden>
     <object id="pdfObj" data="" type="application/pdf"></object>
